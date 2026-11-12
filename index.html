@@ -550,353 +550,6 @@
   }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #38bdf8; }
 
-
-  /* ESTILOS RADAR MASTERS Y SATURACION */
-  .masters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-    gap: 16px;
-    margin-top: 12px;
-  }
-  .master-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--c-borde, rgba(255,255,255,0.08));
-    border-radius: 12px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .master-card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-  }
-  .master-featured {
-    border-color: rgba(56, 189, 248, 0.35);
-    background: rgba(56, 189, 248, 0.03);
-  }
-  .master-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding-bottom: 10px;
-    margin-bottom: 12px;
-  }
-  .master-tag {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    color: var(--c-texto-sec);
-  }
-  .sat-badge {
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 999px;
-    border: 1px solid;
-    white-space: nowrap;
-  }
-  .master-body {
-    font-size: 13px;
-    line-height: 1.5;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-grow: 1;
-  }
-  .m-prop {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .m-label {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--c-texto-sec);
-    text-transform: uppercase;
-  }
-  .m-box-strategy {
-    background: rgba(56, 189, 248, 0.06);
-    border-left: 3px solid var(--c-accent, #38bdf8);
-    padding: 8px 10px;
-    border-radius: 4px;
-    margin-top: 4px;
-    font-size: 12.5px;
-  }
-  .m-box-verdict {
-    background: rgba(52, 211, 153, 0.06);
-    border-left: 3px solid var(--c-verde, #34d399);
-    padding: 8px 10px;
-    border-radius: 4px;
-    font-size: 12.5px;
-  }
-  .master-foot {
-    margin-top: 14px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-  .btn-master {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    padding: 7px 12px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 6px;
-    color: var(--c-texto-pri);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 12.5px;
-    transition: all 0.2s;
-  }
-  .btn-master:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-
-  /* SELECTOR DE MODO GLOBAL Y ENFOQUE DE CAMINO */
-  .mode-switch-wrap {
-    margin: 0 0 16px 0;
-    padding: 12px 18px;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .mode-switch-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .mode-switch-label {
-    font-size: 11.5px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 700;
-    color: #94a3b8;
-  }
-  .mode-switch-btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .mode-btn {
-    font-size: 12px;
-    padding: 6px 13px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.04);
-    color: #cbd5e1;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all .18s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .mode-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.25);
-  }
-  .mode-btn.active {
-    background: rgba(56, 189, 248, 0.16);
-    border-color: #38bdf8;
-    color: #38bdf8;
-    font-weight: 700;
-    box-shadow: 0 0 14px rgba(56, 189, 248, 0.2);
-  }
-
-  /* BANNER DE ENFOQUE DE CAMINO */
-  .focus-banner {
-    grid-column: span 12;
-    padding: 18px 22px;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(15, 23, 42, 0.85) 100%);
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 2px;
-    animation: fadeInFocus 0.3s ease;
-  }
-  @keyframes fadeInFocus {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .focus-banner-left {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .focus-tag {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: #10b981;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .focus-title {
-    font-size: 19px;
-    font-weight: 700;
-    color: #f8fafc;
-    margin: 0;
-  }
-  .focus-desc {
-    font-size: 13.2px;
-    color: #94a3b8;
-    margin: 0;
-    max-width: 840px;
-    line-height: 1.5;
-  }
-  .btn-reset-focus {
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    color: #f1f5f9;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .2s;
-  }
-  .btn-reset-focus:hover {
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.4);
-  }
-
-  /* PLAN QUIRURGICO (3 PASOS CLAVE) */
-  .surgical-plan-tile {
-    grid-column: span 12;
-    background: #0f172a;
-    border: 1px solid rgba(56, 189, 248, 0.35);
-    border-radius: 12px;
-    padding: 22px;
-    margin-bottom: 2px;
-    animation: fadeInFocus 0.35s ease;
-  }
-  .surgical-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 16px;
-    margin-top: 14px;
-  }
-  .surg-card {
-    background: rgba(30, 41, 59, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .surg-card.step1 { border-top: 3.5px solid #38bdf8; }
-  .surg-card.step2 { border-top: 3.5px solid #10b981; }
-  .surg-card.step3 { border-top: 3.5px solid #f59e0b; }
-  .surg-kicker {
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-bottom: 6px;
-  }
-  .surg-card.step1 .surg-kicker { color: #38bdf8; }
-  .surg-card.step2 .surg-kicker { color: #10b981; }
-  .surg-card.step3 .surg-kicker { color: #f59e0b; }
-  .surg-title {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: #f1f5f9;
-    margin-bottom: 8px;
-    line-height: 1.4;
-  }
-  .surg-desc {
-    font-size: 12.8px;
-    color: #94a3b8;
-    line-height: 1.5;
-    margin-bottom: 12px;
-  }
-  .surg-action {
-    margin-top: auto;
-    padding-top: 10px;
-    border-top: 1px dashed rgba(255, 255, 255, 0.08);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .surg-badge {
-    font-size: 11px;
-    font-weight: 600;
-    color: #cbd5e1;
-    background: rgba(255, 255, 255, 0.07);
-    padding: 3px 8px;
-    border-radius: 4px;
-  }
-
-  /* CAJA DE MITOS Y BARRERAS DESCARTADAS */
-  .myths-box {
-    margin-top: 14px;
-    padding: 14px 16px;
-    background: rgba(16, 185, 129, 0.07);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    border-radius: 8px;
-  }
-  .myths-head {
-    font-size: 12.5px;
-    font-weight: 700;
-    color: #10b981;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .myth-item {
-    font-size: 12px;
-    color: #cbd5e1;
-    line-height: 1.5;
-    margin-bottom: 6px;
-  }
-  .myth-item:last-child { margin-bottom: 0; }
-  .myth-cross { color: #ef4444; font-weight: 700; margin-right: 4px; }
-  .myth-check { color: #10b981; font-weight: 600; }
-
-  /* BOTÓN ENFOCAR CAMINO DENTRO DEL EXPLORADOR */
-  .btn-focus-path {
-    font-size: 12px;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 6px;
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    color: #10b981;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .btn-focus-path:hover {
-    background: rgba(16, 185, 129, 0.3);
-    border-color: #10b981;
-    color: #fff;
-  }
-  .btn-focus-path.focused {
-    background: #10b981;
-    border-color: #10b981;
-    color: #0c1017;
-  }
-
 </style>
 </head>
 <body>
@@ -940,7 +593,7 @@
       <textarea id="letter-content" class="letter-textarea" rows="13" spellcheck="false"></textarea>
       
       <div class="modal-footer-tip">
-        <span>💡 <b>Consejo del Coach:</b> Esta carta está redactada con la experiencia del perfil de muestra (soporte en Northwind Systems y atención bilingüe para EE. UU.), sin clichés vacíos. Puedes editarla libremente aquí antes de copiarla.</span>
+        <span>💡 <b>Consejo del Coach:</b> Esta carta está redactada con tus datos reales de Icsa Engineering y soporte bilingüe para EE. UU., sin clichés vacíos. Puedes editarla libremente aquí antes de copiarla.</span>
       </div>
     </div>
 
@@ -982,1037 +635,1017 @@
   </div>
 </div>
 
-<script id="datos" type="application/json">
-{
-  "edicion": "2026-11-02",
-  "edicion_texto": "Lunes 2 de noviembre de 2026 · demo con datos de muestra",
-  "regla": "Remoto en España preferente · Valencia si la entrada es baja",
-  "embudo": {
-    "total": 149,
-    "gmail": 66,
-    "web": 83,
-    "descartes_fase1": 113,
-    "analizadas_ia": 36,
-    "seleccionadas": 6,
-    "descartes_fase2": 30
+<script id="datos" type="application/json">{
+ "edicion": "2026-11-04",
+ "edicion_texto": "Lunes 4 de noviembre de 2026",
+ "regla": "Remoto en España preferente · Madrid si la entrada es baja",
+ "embudo": {
+  "total": 184,
+  "gmail": 100,
+  "web": 84,
+  "descartes_fase1": 63,
+  "analizadas_ia": 121,
+  "seleccionadas": 10,
+  "seleccionadas_total_pool": 26,
+  "nuevas_esta_semana": 10,
+  "retenidas_mes": 16
+ },
+ "conclusion": "Corrida de noviembre: Tracción en el Área C (micro1 y DataAnnotation a 15–40 $/h en remoto asíncrono) y ventana activa para El Corte Inglés y roles operativos en EE. UU.",
+ "areas": {
+  "A": {
+   "nombre": "Soporte / CX",
+   "color": "#3b82f6"
   },
-  "conclusion": "Corrida de muestra: tracción en el Área C (anotación y evaluación de IA en remoto asíncrono) y ventana activa para roles de operaciones en fintech.",
-  "areas": {
-    "A": {
-      "nombre": "Soporte / CX",
-      "color": "#3b82f6"
-    },
-    "B": {
-      "nombre": "Fintech",
-      "color": "#f59e0b"
-    },
-    "C": {
-      "nombre": "IA",
-      "color": "#8b5cf6"
-    },
-    "D": {
-      "nombre": "AI Operations & Automatización",
-      "color": "#10b981",
-      "descripcion": "AI Operations, Support Ops, Integración de flujos con n8n/Make/Zapier y conexión de APIs/CRM sin programar en bajo nivel."
-    }
+  "B": {
+   "nombre": "Fintech",
+   "color": "#f59e0b"
   },
-  "perfil_coach": {
-    "arquetipo": "Constructor metódico",
-    "resumen_rasgos": "Estrategia (78) · Creatividad (85) · Investigación (70) · Aguante medio (55) · Recuperación media (45) · Estímulo bajo (20) · Contacto social bajo (35) · Integridad (88)",
-    "regla_oro": "Rindes mejor cerrando tareas acotadas. El mejor camino combina un empleo estable de base con la construcción de automatizaciones propias."
+  "C": {
+   "nombre": "IA",
+   "color": "#8b5cf6"
   },
-  "caminos_carrera": [
+  "D": {
+   "nombre": "Producto / QA",
+   "color": "#10b981"
+  }
+ },
+ "perfil_coach": {
+  "arquetipo": "Orquídea de ráfagas",
+  "resumen_rasgos": "Estrategia alta (83) · Creatividad (92) · Investigación (75) · Aguante bajo (40) · Recuperación lenta (25) · Silencio obligatorio (Estímulo 0) · Contacto social bajo (25) · Integridad (92)",
+  "regla_oro": "Tu cabeza descansa cuando TERMINAS cosas acotadas. El mejor camino combina un suelo tranquilo (que pague tus facturas sin llamadas masivas) con la creación de activos y automatizaciones propias."
+ },
+ "caminos_carrera": [
+  {
+   "id": "ia_auto",
+   "nombre": "1. Automatización IA & Operaciones",
+   "etiqueta": "★ MEJOR ENCAJE (9,2/10)",
+   "color": "#10b981",
+   "encaje_nota": "9.2",
+   "subtitulo": "De operador de herramientas e IA a consultor / creador de sistemas automatizados para empresas",
+   "timeline": [
     {
-      "id": "ia_auto",
-      "nombre": "1. Automatización IA & Operaciones",
-      "etiqueta": "★ MEJOR ENCAJE (9,2/10)",
-      "color": "#10b981",
-      "encaje_nota": "9.2",
-      "subtitulo": "De operador de herramientas e IA a consultor / creador de sistemas automatizados para empresas",
-      "timeline": [
-        {
-          "fase": "PASO 1 · Meses 0 a 6",
-          "rol": "Operador IA / Junior CX & IA",
-          "como_entrar": "Sin máster caro: entrar en puesto remoto base (ej. El Corte Inglés CX+IA o AI Trainer en iMerit/Alignerr) mientras dominas n8n, Make y APIs en bloques de 45 min.",
-          "ingresos": "17.500 – 22.000 €/año",
-          "extra": "O 15–30 $/h por tareas"
-        },
-        {
-          "fase": "PASO 2 · Meses 6 a 18",
-          "rol": "AI Operations / Automation Specialist",
-          "como_entrar": "Con 3-5 flujos reales en tu portfolio (que conecten correo, CRM, facturación y WhatsApp con IA), pasas a gestionar automatizaciones internas o vendes tus primeros proyectos sueltos.",
-          "ingresos": "25.000 – 32.000 €/año",
-          "extra": "Proyectos extra: 800–1.500 €"
-        },
-        {
-          "fase": "PASO 3 · Años 1,5 a 3",
-          "rol": "Consultor de Automatización & Agentes IA",
-          "como_entrar": "Diseñas arquitecturas completas en n8n autohospedado, bases de conocimiento (RAG) y agentes que ahorran sueldos enteros a pymes y despachos.",
-          "ingresos": "36.000 – 50.000 €/año",
-          "extra": "Tarifa freelance: 45–75 €/h"
-        },
-        {
-          "fase": "PASO 4 · Año 3+ (Libertad)",
-          "rol": "Agencia Unipersonal / Retainers B2B",
-          "como_entrar": "Cobras implantación inicial + una cuota mensual fija (mantenimiento de APIs y mejoras) a una cartera pequeña de 8 a 10 empresas clientes.",
-          "ingresos": "50.000 – 80.000 €/año",
-          "extra": "4.000–6.500 €/mes en cuotas"
-        }
-      ],
-      "aprendizaje": {
-        "stack": "n8n (self-hosted Docker), Make.com, Webhooks, APIs REST, JSON estructurado, agentes LLM, WhatsApp Business API, CRM (HubSpot/Notion)",
-        "densidad": "Baja - Media",
-        "densidad_desc": "Modular y práctico: se aprende conectando flujos en bloques de 45-60 min. Cero teoría académica aburrida.",
-        "matematicas": "Casi Nulas (1/10)",
-        "matematicas_desc": "Solo aritmética básica y cálculo de costes de tokens. Cero álgebra y cero cálculo.",
-        "logica": "Alta (8/10)",
-        "logica_desc": "Mucha lógica de árbol de decisión: condicionales 'si pasa X haz Y', manejo de errores y variables.",
-        "social": "Baja en empleo (3/10) · Media en freelance (5/10)",
-        "social_desc": "Trabajo 90% en silencio frente al editor. En freelance solo tratas 1 a 1 con el dueño del negocio para entender su problema.",
-        "marketing": "Media en freelance (6/10) · Nula en empleo (1/10)",
-        "marketing_desc": "No se vende haciendo llamadas en frío; se vende regalando una auditoría o una demo funcional de 2 minutos que ahorra horas al cliente."
-      },
-      "demanda_real": "Alta y creciente en PYMEs, clínicas, inmobiliarias, despachos y agencias que tienen un caos de Excel, WhatsApp y facturas. No piden jamás título universitario: compran tiempo ahorrado y sistemas que funcionen.",
-      "entorno_y_personalidad": "Encaja al 100% con tu curiosidad mecánica («entender cómo funciona algo por dentro y mejorarlo»). Trabajas en silencio absoluto diseñando flujos lógicos, con trato 1 a 1 con dueños de negocio (sin política de oficina) y tareas cerrables.",
-      "opiniones": [
-        {
-          "tipo": "pro",
-          "autor": "Consultor Freelance n8n en España (Reddit r/automation)",
-          "texto": "«Con n8n en un VPS de 5€ le resuelves la facturación o la captación a una pyme y te pagan 2.000€ encantados. El verdadero dinero no está en montar el bot, sino en cobrarles 300€-400€ al mes por mantener las APIs funcionando sin que ellos tengan que preocuparse.»"
-        },
-        {
-          "tipo": "pro",
-          "autor": "Ex-empleado de soporte reconvertido a AI Ops",
-          "texto": "«Nadie me preguntó qué título tenía. Les enseñé un flujo en vivo que leía facturas de un correo, las clasificaba con IA y las subía a su software contable. Me contrataron al día siguiente.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Desarrollador No-Code en foros técnicos",
-          "texto": "«Olvídate del humo de YouTube de hacerte rico en 10 minutos con un vídeo de TikTok. El 70% del tiempo real es pelearte con APIs mal documentadas, limpiar datos sucios que el cliente tiene en hojas de cálculo rotas y educar a jefes que piden 'IA mágica' cuando no tienen ordenados ni sus correos.»"
-        }
-      ],
-      "area_filtro": "D",
-      "areas_compatibles": [
-        "D",
-        "C"
-      ],
-      "plan_quirurgico": {
-        "paso_inmediato": {
-          "titulo": "Certificación gratuita n8n Academy (Nivel 1 y 2)",
-          "duracion": "2 semanas (~10 h)",
-          "accion": "Completar los módulos oficiales de n8n.io sobre webhooks, manejo de errores, HTTP Requests y payloads JSON estructurados.",
-          "enlace": "https://docs.n8n.io/courses/",
-          "enlace_label": "Ir a n8n Academy ↗"
-        },
-        "portfolio_clave": {
-          "titulo": "Pipeline de Clasificación y Respuesta con IA + CRM",
-          "descripcion": "Un flujo real en n8n o Make que monitoriza un buzón de soporte, pasa el contenido a un LLM para clasificar urgencia y redactar respuesta, y crea el ticket en Jira/Notion automáticamente.",
-          "por_que_destaca": "Demuestra valor de negocio directo: cualquier scale-up o pyme ve que le ahorras 15 horas semanales de trabajo manual."
-        },
-        "estrategia_entrada": {
-          "donde_postular": "Puestos de AI Operations Specialist, Support Operations o Automation Specialist en startups remotas (Himalayas, Greenhouse, Lever, Ashby).",
-          "como_destacar": "Adjuntar un vídeo Loom de 90 segundos mostrando la automatización en vivo en vez de enviar solo un PDF de CV estándar."
-        }
-      },
-      "barreras_reales": [
-        {
-          "carencia": "Falta de flujos de automatización visibles en portfolio",
-          "ofertas": 14,
-          "accion": "Construir y publicar 2 demos de flujos en n8n/Make con vídeo explicativo de 90 seg.",
-          "superable_en": "2 semanas"
-        },
-        {
-          "carencia": "Webhooks y manipulación de datos JSON",
-          "ofertas": 11,
-          "accion": "Dominar nodos de HTTP Request y arrays/objetos en la academia oficial de n8n.",
-          "superable_en": "1 semana"
-        },
-        {
-          "carencia": "Integración con CRMs (HubSpot, Jira, Salesforce)",
-          "ofertas": 8,
-          "accion": "Completar el badge gratuito de Atlassian Jira Service Management (2,5 h).",
-          "superable_en": "3 días"
-        }
-      ],
-      "mitos_descartados": [
-        {
-          "mito": "Tercer idioma europeo obligatorio",
-          "realidad": "FALSO en este camino. El 95% de las startups de automatización trabajan con comunicación asíncrona en español o inglés técnico para leer documentación de APIs."
-        },
-        {
-          "mito": "Grado universitario en Ingeniería Informática",
-          "realidad": "FALSO en este camino. En operaciones No-Code y flujos de IA las empresas compran tiempo ahorrado y fiabilidad, jamás miran títulos académicos."
-        },
-        {
-          "mito": "Programar software desde cero en Java / C# / Python avanzado",
-          "realidad": "FALSO en este camino. Solo necesitas lógica condicional básica (if/else), conectar endpoints REST y redactar prompts estructurados."
-        }
-      ]
+     "fase": "PASO 1 · Meses 0 a 6",
+     "rol": "Operador IA / Junior CX & IA",
+     "como_entrar": "Sin máster caro: entrar en puesto remoto base (ej. El Corte Inglés CX+IA o AI Trainer en iMerit/Alignerr) mientras dominas n8n, Make y APIs en bloques de 45 min.",
+     "ingresos": "17.500 – 22.000 €/año",
+     "extra": "O 15–30 $/h por tareas"
     },
     {
-      "id": "ui_builder",
-      "nombre": "2. Diseñador UI + Builder con IA",
-      "etiqueta": "ALTO POTENCIAL CREATIVO (8,2/10)",
-      "color": "#38bdf8",
-      "encaje_nota": "8.2",
-      "subtitulo": "Combinar tu rasgo más alto (Artístico 85) con código asistido por IA para entregar productos completos",
-      "timeline": [
-        {
-          "fase": "PASO 1 · Meses 0 a 6",
-          "rol": "UI/Web Prototyper con IA",
-          "como_entrar": "Aprender fundamentos de Figma + seguir construyendo aplicaciones y paneles web de un solo archivo con Cursor/Claude como ya haces en tu portfolio.",
-          "ingresos": "Suelo base + 500–1.000 €/encargo",
-          "extra": "Coste de estudio: 0 €"
-        },
-        {
-          "fase": "PASO 2 · Meses 6 a 18",
-          "rol": "Product Builder / Frontend asistido",
-          "como_entrar": "En vez de competir por puestos de 'Junior UX' (donde solo dibujan pantallas), entregas a pequeñas empresas o startups la web, calculadora o dashboard ya funcionando.",
-          "ingresos": "24.000 – 32.000 €/año",
-          "extra": "1.200–2.500 € por web/app"
-        },
-        {
-          "fase": "PASO 3 · Años 1,5 a 3",
-          "rol": "Design Engineer (Diseño + Código IA)",
-          "como_entrar": "Perfil híbrido muy buscado en startups remotas: haces el trabajo de diseñador de producto y maquetador front-end al mismo tiempo gracias a la IA.",
-          "ingresos": "38.000 – 52.000 €/año",
-          "extra": "Remoto internacional con inglés"
-        },
-        {
-          "fase": "PASO 4 · Año 3+ (Libertad)",
-          "rol": "Estudio Digital Propio / Micro-SaaS",
-          "como_entrar": "Lanzas tus propias herramientas web de nicho bajo suscripción o vendes paquetes cerrados de diseño + automatización a empresas.",
-          "ingresos": "45.000 – 75.000 €/año",
-          "extra": "Ingresos por licencias/productos"
-        }
-      ],
-      "aprendizaje": {
-        "stack": "Figma (Auto-layout, Design Systems), Tailwind CSS, HTML/JS moderno asistido por IA (Cursor, Claude Code), UI Component Libraries",
-        "densidad": "Media (Muy visual y gratificante)",
-        "densidad_desc": "Ideal para ráfagas: ves el resultado visual en pantalla de inmediato. Mucho ensayo y error rápido.",
-        "matematicas": "Cero (0/10)",
-        "matematicas_desc": "Ninguna matemática avanzada. Solo proporciones visuales (grid de 8px, porcentajes y rems).",
-        "logica": "Media (5/10)",
-        "logica_desc": "Lógica de estados visuales: botones activos, modales, formularios, responsive y flujos de usuario.",
-        "social": "Baja - Media (4/10)",
-        "social_desc": "Horas en estado de flujo creativo en solitario. Solo requiere saber defender tus decisiones de diseño ante clientes sin frustrarte.",
-        "marketing": "Media - Alta en freelance (7/10)",
-        "marketing_desc": "Aquí el diseño entra por los ojos: tu propio portfolio publicado y pequeñas demos en redes o foros hacen todo el trabajo de atracción."
-      },
-      "demanda_real": "IMPORTANTE: El puesto de 'UX/UI Junior' tradicional (solo usar Figma) está saturadísimo de gente de bootcamps. Pero el perfil de 'Design Engineer' (alguien con buen gusto visual que entrega la herramienta funcionando con IA) tiene muchísima salida.",
-      "entorno_y_personalidad": "Alimenta tu interés más fuerte (Artístico 85 + Investigador 70) en silencio y estado de flujo. Precaución: como tienes sensibilidad alta a las opiniones ajenas (70), evita agencias de publicidad donde 5 jefes opinan sobre los colores; vende herramientas funcionales.",
-      "opiniones": [
-        {
-          "tipo": "pro",
-          "autor": "Design Engineer en startup remota (Reddit r/UXDesign)",
-          "texto": "«Antes un diseñador dependía de que un programador quisiera pasar su Figma a código. Hoy con Cursor y Claude paso mis propios diseños a producción en HTML/Tailwind y cobro el proyecto entero yo solo. El cliente queda alucinado de ver la app funcionando en días.»"
-        },
-        {
-          "tipo": "pro",
-          "autor": "Diseñador UI reconvertido con IA",
-          "texto": "«Lo mejor de este trabajo es el estado de flujo: ponerte auriculares con música tranquila, abrir Figma o tu editor y moldear una interfaz limpia. Te vas a dormir con la cabeza despejada porque viste lo que creaste.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Product Designer Senior en España",
-          "texto": "«Salir hoy al mercado sabiendo solo hacer pantallitas estáticas en Figma es darte contra un muro: hay 400 juniors por oferta. Además, en agencias sufres el 'diseño por comité': el jefe y el comercial opinan sobre los colores sin criterio. Para no quemarte, vende software terminado que solucione problemas, no arte subjetivo.»"
-        }
-      ],
-      "area_filtro": "D",
-      "areas_compatibles": [
-        "D",
-        "C"
-      ],
-      "plan_quirurgico": {
-        "paso_inmediato": {
-          "titulo": "Despliegue interactivo del Radar de Empleo en GitHub Pages",
-          "duracion": "3 días (~5 h)",
-          "accion": "Publicar la versión interactiva del Radar de Empleo con datos mock para usarla como carta de presentación pública y activa.",
-          "enlace": "https://pages.github.com/",
-          "enlace_label": "Ver GitHub Pages ↗"
-        },
-        "portfolio_clave": {
-          "titulo": "Trilogía de Apps Web de un Solo Archivo (Single-File Tools)",
-          "descripcion": "3 herramientas web reales y responsivas (calculadora financiera, panel de operaciones y explorador de datos) construidas con Tailwind CSS y HTML/JS asistido por IA.",
-          "por_que_destaca": "El 90% de los juniors de diseño solo enseñan capturas estáticas en Figma que no funcionan. Tú entregas la web viva en producción."
-        },
-        "estrategia_entrada": {
-          "donde_postular": "Puestos de Design Engineer, UI Prototyper o Frontend Asistido en startups remotas.",
-          "como_destacar": "Enviar enlaces directos a las apps desplegadas donde el reclutador puede interactuar con la interfaz en el primer segundo."
-        }
-      },
-      "barreras_reales": [
-        {
-          "carencia": "Portafolio no visible en producción (solo maquetas estáticas)",
-          "ofertas": 18,
-          "accion": "Subir 3 demos funcionales a GitHub Pages con dominio o Vercel.",
-          "superable_en": "2 semanas"
-        },
-        {
-          "carencia": "Consistencia en sistemas de diseño y ritmo tipográfico",
-          "ofertas": 9,
-          "accion": "Estudiar la guía de Emil Kowalski y Web Interface Guidelines (jerarquía, ritmo 8px).",
-          "superable_en": "1 semana"
-        }
-      ],
-      "mitos_descartados": [
-        {
-          "mito": "Saber SQL y bases de datos relacionales",
-          "realidad": "FALSO en este camino. El foco es frontend, componentes visuales y experiencia de usuario asistida por IA."
-        },
-        {
-          "mito": "Máster caro de UX/UI tradicional (5.000€)",
-          "realidad": "FALSO y contraproducente. Los graduados de bootcamps tradicionales de UX solo entregan PDFs con 'user personas' que el mercado ya no contrata. El mercado busca 'Design Engineers' que pongan software en pantalla."
-        },
-        {
-          "mito": "Tercer idioma europeo",
-          "realidad": "FALSO en este camino. Se trabaja en remoto para mercados hispanohablantes o internacionales en inglés asíncrono."
-        }
-      ]
+     "fase": "PASO 2 · Meses 6 a 18",
+     "rol": "AI Operations / Automation Specialist",
+     "como_entrar": "Con 3-5 flujos reales en tu portfolio (que conecten correo, CRM, facturación y WhatsApp con IA), pasas a gestionar automatizaciones internas o vendes tus primeros proyectos sueltos.",
+     "ingresos": "25.000 – 32.000 €/año",
+     "extra": "Proyectos extra: 800–1.500 €"
     },
     {
-      "id": "data_bi",
-      "nombre": "3. Analista de Datos → Data Science",
-      "etiqueta": "ESTABLE PERO EXIGENTE (7,4/10)",
-      "color": "#8b5cf6",
-      "encaje_nota": "7.4",
-      "subtitulo": "Entrar por Business Intelligence (SQL + Power BI) hacia Ciencia de Datos sin quemarte en el intento",
-      "timeline": [
-        {
-          "fase": "PASO 1 · Meses 0 a 6",
-          "rol": "Formación / Becario o Junior de Datos",
-          "como_entrar": "Dominar Excel avanzado, SQL y Power BI/Tableau (puedes entrar por puestos como el de El Corte Inglés o Fintonic antes de pagar 3.565 € por un máster).",
-          "ingresos": "16.000 – 20.000 €/año",
-          "extra": "Etapa de entrada / filtro"
-        },
-        {
-          "fase": "PASO 2 · Años 1 a 2",
-          "rol": "Data Analyst / BI Analyst Junior",
-          "como_entrar": "Trabajo diario con consultas SQL, limpieza de datos con Python (Pandas) y creación de cuadros de mando para dirección en empresas o consultoras.",
-          "ingresos": "23.000 – 28.000 €/año",
-          "extra": "Muy común empezar en consultora"
-        },
-        {
-          "fase": "PASO 3 · Años 2 a 4",
-          "rol": "Senior Data Analyst / Analytics Engineer",
-          "como_entrar": "Ya con 2 años de experiencia real, nadie mira si tienes carrera universitaria. Automatizas pipelines de datos en la nube y modelos predictivos.",
-          "ingresos": "35.000 – 48.000 €/año",
-          "extra": "Salto a cliente final con inglés"
-        },
-        {
-          "fase": "PASO 4 · Año 4+ (Libertad)",
-          "rol": "Data Scientist / Consultor BI Freelance",
-          "como_entrar": "Trabajas como contractor remoto para empresas extranjeras o montas cuadros de mando financieros y operativos para medianas empresas.",
-          "ingresos": "50.000 – 70.000 €/año",
-          "extra": "300–450 €/día como contractor"
-        }
-      ],
-      "aprendizaje": {
-        "stack": "SQL (JOINs, CTEs, Window Functions), Power BI / Tableau (DAX, modelado), Python (Pandas, NumPy), Excel/Power Query, Git",
-        "densidad": "Alta (7/10)",
-        "densidad_desc": "Densa en SQL y Power BI. Si optas por un máster como PontIA (25 semanas), debes asegurarte de entrar con Beca ISA (paga solo si trabajas) y construir proyectos propios para no salir con el mismo portfolio que tus compañeros.",
-        "matematicas": "Baja en Data Analyst (3/10) · Muy Alta en Data Science (9/10)",
-        "matematicas_desc": "Para analista solo necesitas estadística descriptiva (medias, varianzas, percentiles, KPIs). Para Data Scientist puro piden álgebra lineal y cálculo.",
-        "logica": "Alta (8/10)",
-        "logica_desc": "Lógica relacional pura: cómo cruzar tablas, filtrar duplicados y asegurar que los números cuadren al céntimo.",
-        "social": "Media (5/10)",
-        "social_desc": "Mucho tiempo en silencio analizando datos, pero debes presentar tus conclusiones e informes a directores que no saben de tecnología.",
-        "marketing": "Baja (2/10)",
-        "marketing_desc": "Es un perfil corporativo tradicional; te contratan por pruebas técnicas de SQL y portfolio de cuadros de mando."
-      },
-      "demanda_real": "Mercado junior saturadísimo de graduados de bootcamps genéricos (Titanic, Netflix). Las empresas en España descartan CVs sin experiencia si no ven: 1) Dominio real de negocio, 2) Certificación oficial (PL-300) y 3) Portafolio con datos limpios propios. En Data Science puro (ML) piden grado técnico obligatorio; en Business Intelligence y Análisis Operativo sí se entra sin carrera.",
-      "entorno_y_personalidad": "Muy buen entorno para trabajar en silencio, con auriculares, analizando números sin atender llamadas. El riesgo para ti es la fase de estudio: un bootcamp de 17 módulos en 25 semanas puede agotar tu depósito de energía (40) si intentas abarcarlo todo de golpe.",
-      "opiniones": [
-        {
-          "tipo": "pro",
-          "autor": "Data Analyst en Madrid (Reddit r/salarios_es)",
-          "texto": "«Cuando pasas la barrera de los 2 años en SQL y Power BI con buen inglés, vives muy tranquilo, 100% en remoto y nadie te molesta mientras entregues los informes a tiempo los viernes.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Junior reconvertido de bootcamp (Reddit r/askspain)",
-          "texto": "«Me gasté casi 5.000€ en un máster que me prometía salir de Data Scientist ganando 40k. La realidad es que todas las ofertas de Machine Learning pedían carrera de Matemáticas o Física. Conseguí trabajo de Data Analyst porque aprendí SQL y Power BI por mi cuenta.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Analista Senior en consultora",
-          "texto": "«El estrés en este puesto no es técnico: es político. Te pasas el día siendo el 'chico de los informes' para directores que te piden cambios de última hora y que luego toman decisiones ignorando los datos.»"
-        }
-      ],
-      "area_filtro": "B",
-      "areas_compatibles": [
-        "B"
-      ],
-      "plan_quirurgico": {
-        "paso_inmediato": {
-          "titulo": "Preparación oficial de la certificación Microsoft PL-300 (Power BI)",
-          "duracion": "3 a 4 semanas",
-          "accion": "Estudiar el itinerario oficial gratuito en Microsoft Learn para preparar el examen oficial de Power BI Data Analyst Associate.",
-          "enlace": "https://learn.microsoft.com/certifications/exams/pl-300/",
-          "enlace_label": "Ruta oficial PL-300 ↗"
-        },
-        "portfolio_clave": {
-          "titulo": "Dashboard Financiero / Operativo con KPIs de Negocio y SQL",
-          "descripcion": "Un cuadro de mando interactivo en Power BI conectado a una base de datos relacional modelada en estrella, con medidas DAX avanzadas y foco en rentabilidad o retención de clientes.",
-          "por_que_destaca": "Rompe la saturación de los bootcamps: mientras 500 juniors presentan el dataset del Titanic o películas de Netflix, tú presentas una solución de negocio."
-        },
-        "estrategia_entrada": {
-          "donde_postular": "Puestos junior de BI Analyst, Data Analyst o Reporting en empresas de retail (El Corte Inglés), fintech (Fintonic) o consultoras de datos.",
-          "como_destacar": "Presentar la credencial oficial PL-300 en LinkedIn y un repositorio con consultas SQL limpias (CTEs, Window Functions)."
-        }
-      },
-      "barreras_reales": [
-        {
-          "carencia": "Saturación extrema de juniors sin certificación oficial reconocida",
-          "ofertas": 42,
-          "accion": "Acreditar el examen oficial Microsoft PL-300 (pesa más que diplomas privados de academia).",
-          "superable_en": "4 semanas"
-        },
-        {
-          "carencia": "Dominio de consultas SQL relacionales complejas (JOINs, GROUP BY, CTEs)",
-          "ofertas": 31,
-          "accion": "Práctica intensiva en plataformas como SQLZoo / LeetCode SQL 50.",
-          "superable_en": "3 semanas"
-        },
-        {
-          "carencia": "Modelado de datos en estrella y DAX avanzado",
-          "ofertas": 16,
-          "accion": "Dominar funciones CALCULATE, FILTER y relaciones 1 a varios en Power BI.",
-          "superable_en": "2 semanas"
-        }
-      ],
-      "mitos_descartados": [
-        {
-          "mito": "Tercer idioma europeo obligatorio",
-          "realidad": "FALSO en este camino. En análisis de datos para España o multinacionales remotas, el trabajo es con bases de datos y dashboards en español o inglés técnico."
-        },
-        {
-          "mito": "Álgebra lineal, cálculo multivariable y Deep Learning",
-          "realidad": "FALSO para analista. Esas matemáticas solo las piden para puestos de Data Scientist / ML Engineer puro (donde exigen matemáticas o física). En BI solo necesitas estadística descriptiva y lógica de negocio."
-        },
-        {
-          "mito": "Pagar un máster por adelantado sin garantías",
-          "realidad": "EVITAR si exige pago al contado de 4.000€-6.000€. Si se hace máster (ej. PontIA), debe ser exclusivamente bajo modelo Beca ISA (pago tras conseguir empleo > 18.000€)."
-        }
-      ]
+     "fase": "PASO 3 · Años 1,5 a 3",
+     "rol": "Consultor de Automatización & Agentes IA",
+     "como_entrar": "Diseñas arquitecturas completas en n8n autohospedado, bases de conocimiento (RAG) y agentes que ahorran sueldos enteros a pymes y despachos.",
+     "ingresos": "36.000 – 50.000 €/año",
+     "extra": "Tarifa freelance: 45–75 €/h"
     },
     {
-      "id": "qa_test",
-      "nombre": "4. QA & Testing de Aplicaciones",
-      "etiqueta": "FRICCIÓN MEDIA (6,8/10)",
-      "color": "#f59e0b",
-      "encaje_nota": "6.8",
-      "subtitulo": "De probar aplicaciones manualmente a programar tests automáticos (Playwright / AI QA)",
-      "timeline": [
-        {
-          "fase": "PASO 1 · Meses 0 a 4",
-          "rol": "QA Manual / Evaluador de Calidad IA",
-          "como_entrar": "Aprender gestión de bugs en Jira, pruebas de APIs con Postman y bases de Playwright. Entrada rápida sin carrera universitaria.",
-          "ingresos": "18.000 – 22.000 €/año",
-          "extra": "Puerta clásica al mundo IT"
-        },
-        {
-          "fase": "PASO 2 · Años 1 a 2",
-          "rol": "QA Tester Junior-Mid",
-          "como_entrar": "Diseñas planes de prueba, validas entregas antes de subir a producción y escribes tus primeros scripts automatizados para web y móvil.",
-          "ingresos": "23.000 – 29.000 €/año",
-          "extra": "Híbrido o remoto en consultoras"
-        },
-        {
-          "fase": "PASO 3 · Años 2 a 4",
-          "rol": "QA Automation Engineer",
-          "como_entrar": "Dominas Playwright/Cypress con código e integras pruebas automáticas en el pipeline de despliegue. Aquí es donde está el salto salarial real.",
-          "ingresos": "33.000 – 45.000 €/año",
-          "extra": "Alta demanda con inglés fluido"
-        },
-        {
-          "fase": "PASO 4 · Año 4+ (Libertad)",
-          "rol": "QA Lead / Contractor Internacional",
-          "como_entrar": "Trabajas en remoto para empresas de EE. UU. o Reino Unido auditando calidad de software y agentes de IA.",
-          "ingresos": "45.000 – 60.000 €/año",
-          "extra": "Difícil montar agencia propia, mejor contractor"
-        }
-      ],
-      "aprendizaje": {
-        "stack": "Jira / Xray, Postman (pruebas de API), Playwright / Cypress (JavaScript/Python básico), Git, CI/CD básico",
-        "densidad": "Media (5/10)",
-        "densidad_desc": "La parte de testing manual es muy accesible; la parte de automatización requiere aprender scripting básico de programación.",
-        "matematicas": "Cero (0/10)",
-        "matematicas_desc": "No se usan matemáticas, salvo contar incidencias y medir cobertura de pruebas.",
-        "logica": "Alta (8/10)",
-        "logica_desc": "Pensamiento crítico destructivo: anticipar qué puede romper la aplicación (valores nulos, cortes de red, caracteres extraños).",
-        "social": "Alta y Delicada (7/10)",
-        "social_desc": "Aunque trabajas en silencio probando el software, tu trabajo diario consiste en decirle a los programadores dónde fallaron. Requiere mucha asertividad y tacto.",
-        "marketing": "Nula (1/10)",
-        "marketing_desc": "Rol 100% técnico asalariado; no necesitas venderte como consultor comercial."
-      },
-      "demanda_real": "El 'QA Manual' puro (hacer clic en pantallas buscando fallos) está cayendo en picado porque la IA y los propios programadores lo automatizan. Hoy las empresas piden que el QA sepa programar tests automáticos (QA Automation).",
-      "entorno_y_personalidad": "Aprovecha tu rasgo controlador y perfeccionista, PERO tiene dos choques fuertes con tu Mapa de Fricción: 1) El QA manual es muy repetitivo (tu interés Convencional es 30, te aburrirá rápido). 2) Vives en 'el sándwich' discutiendo fallos con programadores y jefes con prisa, lo que desgasta tu sensibilidad emocional (72).",
-      "opiniones": [
-        {
-          "tipo": "pro",
-          "autor": "QA Automation en remoto España (Reddit r/programacion)",
-          "texto": "«Entrar como QA fue mi pasaporte al sector tech sin tener ingeniería. Aprendí Playwright por mi cuenta, pasé la prueba técnica y en 3 años estoy en 38.000€ trabajando desde casa con horario flexible.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Tester en consultora tecnológica",
-          "texto": "«Eres el policía del equipo. A los programadores les molesta que les encuentres fallos en su código ('en mi máquina funciona'), y los jefes de producto te presionan para que apruebes el pase a producción rápido. Si algo falla el fin de semana, la primera culpa va para QA.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "QA Manual estancado",
-          "texto": "«Hacer regresiones manuales clicando las mismas 50 pantallas semana tras semana te quema el cerebro. Si no aprendes a programar tests automáticos con código, te quedas atascado en 20k-22k toda la vida.»"
-        }
-      ],
-      "area_filtro": "D",
-      "areas_compatibles": [
-        "D",
-        "A"
-      ],
-      "plan_quirurgico": {
-        "paso_inmediato": {
-          "titulo": "Postman API Fundamentals Student Expert + Bases Playwright",
-          "duracion": "2 semanas (~8 h)",
-          "accion": "Completar la certificación oficial gratuita de Postman sobre pruebas de peticiones HTTP, validación de respuestas y tests automáticos de APIs.",
-          "enlace": "https://academy.postman.com/",
-          "enlace_label": "Postman Academy ↗"
-        },
-        "portfolio_clave": {
-          "titulo": "Suite Automatizada de Pruebas End-to-End con Playwright",
-          "descripcion": "Un script en JavaScript/Python que simula un usuario real iniciando sesión en una app web, navegando por productos, completando un checkout y verificando que no haya errores de consola ni regresiones visuales.",
-          "por_que_destaca": "El QA manual tradicional está perdiendo demanda frente a la automatización. Presentar una suite en Playwright te coloca en el 10% superior de candidatos junior."
-        },
-        "estrategia_entrada": {
-          "donde_postular": "Puestos de Junior QA Automation o Software Tester en consultoras IT y empresas SaaS remotas.",
-          "como_destacar": "Enlazar en el CV el repositorio de GitHub con los tests automáticos y un informe de ejecución con capturas de pantalla de Playwright."
-        }
-      },
-      "barreras_reales": [
-        {
-          "carencia": "Falta de automatización (solo testing manual básico)",
-          "ofertas": 22,
-          "accion": "Aprender scripting básico de Playwright / Cypress para pruebas E2E.",
-          "superable_en": "3 semanas"
-        },
-        {
-          "carencia": "Pruebas de APIs e integración backend",
-          "ofertas": 15,
-          "accion": "Obtener el badge oficial de Postman API Fundamentals.",
-          "superable_en": "1 semana"
-        },
-        {
-          "carencia": "Metodologías de testing estructuradas (casos de prueba, matrices)",
-          "ofertas": 9,
-          "accion": "Estudiar el temario oficial del estándar ISTQB Foundation.",
-          "superable_en": "2 semanas"
-        }
-      ],
-      "mitos_descartados": [
-        {
-          "mito": "Matemáticas avanzadas",
-          "realidad": "CERO matemáticas. Solo lógica de verificación de errores y límites."
-        },
-        {
-          "mito": "Grado en Informática obligatorio",
-          "realidad": "FALSO en QA. Muchas empresas contratan testers por su capacidad analítica y atención al detalle sin mirar la titulación universitaria si demuestran pruebas automatizadas."
-        },
-        {
-          "mito": "Tercer idioma europeo",
-          "realidad": "NO aplica para empresas tech con inglés estándar."
-        }
-      ]
-    },
-    {
-      "id": "soporte_ops",
-      "nombre": "5. Soporte Bilingüe → Support Ops",
-      "etiqueta": "SOLO COMO TRAMPOLÍN (6,5/10)",
-      "color": "#3b82f6",
-      "encaje_nota": "6.5",
-      "subtitulo": "Usar tu experiencia actual e inglés para cobrar ya, pero saliendo rápido del teléfono hacia Operaciones",
-      "timeline": [
-        {
-          "fase": "PASO 1 · Mes 0 (Inmediato)",
-          "rol": "Support Specialist Bilingüe / Back-Office",
-          "como_entrar": "Ya cumples el 100% de los requisitos hoy mismo. Entrar en una oferta remota por escrito/tickets o back-office (evitando call centers masivos).",
-          "ingresos": "18.000 – 25.000 €/año",
-          "extra": "Contratación inmediata"
-        },
-        {
-          "fase": "PASO 2 · Años 1 a 2",
-          "rol": "Technical Support Tier 2 / Onboarding",
-          "como_entrar": "En una empresa de software (SaaS) internacional, pasas a segundo nivel técnico (resuelves incidencias complejas sin atender llamadas de choque).",
-          "ingresos": "26.000 – 33.000 €/año",
-          "extra": "Muy valorado tu inglés de EE. UU."
-        },
-        {
-          "fase": "PASO 3 · Años 2 a 4",
-          "rol": "Support Operations (Support Ops) / CX Lead",
-          "como_entrar": "Dejas de atender clientes y pasas a configurar las herramientas del equipo (Zendesk, Jira, HubSpot, bots de IA y métricas).",
-          "ingresos": "34.000 – 45.000 €/año",
-          "extra": "Conecta directo con el Camino 1"
-        },
-        {
-          "fase": "PASO 4 · Año 4+ (Libertad)",
-          "rol": "Consultor de Operaciones de CX & IA",
-          "como_entrar": "Implantas centros de ayuda automatizados con IA y flujos de CRM para empresas que quieren reducir costes de soporte.",
-          "ingresos": "45.000 – 65.000 €/año",
-          "extra": "Fácil transición a consultoría"
-        }
-      ],
-      "aprendizaje": {
-        "stack": "Zendesk, HubSpot Service, Jira Service Management, flujos de macros, bots de soporte con IA, métricas de CX (CSAT, SLA, FRT)",
-        "densidad": "Mínima (2/10)",
-        "densidad_desc": "Prácticamente nula para ti: ya tienes 4 años de experiencia y nivel bilingüe de inglés.",
-        "matematicas": "Básica (1/10)",
-        "matematicas_desc": "Solo métricas y promedios de tiempos de respuesta.",
-        "logica": "Media (5/10)",
-        "logica_desc": "Configuración de reglas automáticas de enrutamiento de tickets y árboles de soporte con IA.",
-        "social": "Muy Alta en llamadas (9/10) · Baja en Back-office / Ops (3/10)",
-        "social_desc": "En teléfono el contacto social es asfixiante y agota la batería. En Back-office y Support Ops es casi todo comunicación interna por chat.",
-        "marketing": "Baja (2/10)",
-        "marketing_desc": "Se accede mediante procesos de selección estándar valorando tu inglés fluido y trato profesional."
-      },
-      "demanda_real": "Es el camino con mayor volumen de ofertas inmediatas para ti hoy en España y remoto europeo gracias a tu inglés fluido y tus 4 años de experiencia previa.",
-      "entorno_y_personalidad": "Como suelo financiero inmediato es imbatible, pero quedarse en el Nivel 1 atendiendo clientes frustrados choca frontalmente con tu Tolerancia al Estímulo (20) y tu Contacto Social (35). Úsalo SOLO en puestos de back-office/calidad (como El Corte Inglés) o para saltar en 6-12 meses a Operaciones de IA.",
-      "opiniones": [
-        {
-          "tipo": "pro",
-          "autor": "Technical Support en SaaS internacional (remoto España)",
-          "texto": "«Trabajo desde España para una tecnológica alemana atendiendo tickets en inglés y español. No hago ni una sola llamada de voz. Cobro 32.000€, el ambiente es tranquilísimo y a las 17:00 apago la pantalla y me olvido del trabajo hasta el lunes.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Ex-operador de Helpdesk telefónico",
-          "texto": "«El soporte de nivel 1 con llamadas continuas es una picadora de carne. Te miden hasta los segundos que tardas en colgar y te pasas el día absorbiendo el mal humor de clientes frustrados. Si entras en soporte, que sea por chat o para saltar a Support Ops lo antes posible.»"
-        },
-        {
-          "tipo": "con",
-          "autor": "Customer Success Manager en startup",
-          "texto": "«Te venden que eres un asesor estratégico pero luego te asignan 80 cuentas de clientes y te pasas el día apagando fuegos por bugs que desarrollo no arregla. Para no quemarte, el secreto es pasar a Operaciones técnicas internas.»"
-        }
-      ],
-      "area_filtro": "A",
-      "areas_compatibles": [
-        "A",
-        "D"
-      ],
-      "plan_quirurgico": {
-        "paso_inmediato": {
-          "titulo": "Certificación oficial EF SET English (50 min, gratis)",
-          "duracion": "Inmediato (1 día)",
-          "accion": "Completar la prueba oficial de EF SET para obtener el certificado con URL pública verificable de C1/B2 en inglés e insertarlo en LinkedIn y CV.",
-          "enlace": "https://www.efset.org/es/ef-set-50/",
-          "enlace_label": "Hacer EF SET gratis ↗"
-        },
-        "portfolio_clave": {
-          "titulo": "Configuración de Helpdesk y Automatización de SLAs en Jira / HubSpot",
-          "descripcion": "Instancia demo de Jira Service Management o HubSpot Service Hub con colas de soporte clasificadas por severidad, respuestas predefinidas optimizadas y reglas de escalado automático.",
-          "por_que_destaca": "Demuestra que tienes mentalidad de Support Operations (optimizar el sistema) y no solo de atender llamadas pasivamente."
-        },
-        "estrategia_entrada": {
-          "donde_postular": "Puestos 100% remotos por escrito (tickets/chat) en empresas SaaS internacionales o back-office bilingüe.",
-          "como_destacar": "Tus 4+ años de experiencia técnica demostrada y 2 años con clientes de EE. UU. en inglés profesional."
-        }
-      },
-      "barreras_reales": [
-        {
-          "carencia": "Certificado oficial de inglés acreditado en CV",
-          "ofertas": 19,
-          "accion": "Completar el test de 50 min de EF SET para tener enlace verificable.",
-          "superable_en": "1 día"
-        },
-        {
-          "carencia": "Badges oficiales de herramientas de Helpdesk modernas",
-          "ofertas": 14,
-          "accion": "Completar Atlassian Jira Service Management Badge (gratis, 2.5 h) y HubSpot Service Hub.",
-          "superable_en": "3 días"
-        }
-      ],
-      "mitos_descartados": [
-        {
-          "mito": "Tercer idioma obligatorio para todo soporte",
-          "realidad": "Solo aplica a call centers generalistas de España. Las empresas SaaS internacionales y plataformas remotas operan 100% en inglés y español."
-        },
-        {
-          "mito": "Saber programar código",
-          "realidad": "FALSO. Se evalúa empatía, resolución técnica de incidencias bajo SLA y organización de tickets."
-        }
-      ]
+     "fase": "PASO 4 · Año 3+ (Libertad)",
+     "rol": "Agencia Unipersonal / Retainers B2B",
+     "como_entrar": "Cobras implantación inicial + una cuota mensual fija (mantenimiento de APIs y mejoras) a una cartera pequeña de 8 a 10 empresas clientes.",
+     "ingresos": "50.000 – 80.000 €/año",
+     "extra": "4.000–6.500 €/mes en cuotas"
     }
-  ],
-  "mejor_opcion": {
-    "puesto": "Video Annotation",
-    "empresa": "Wingtip AI",
-    "encaje": 9.5,
-    "url": "https://himalayas.app/jobs",
-    "motivos": [
-      "Modalidad: 100% remoto España · Salario: 15–25 $/h",
-      "Anotación/etiquetado de video, seguimiento de directrices, herramientas web. 100% remoto desde España, trabajo asíncrono.",
-      "Seleccionada automáticamente en la corrida semanal tras verificar la web"
-    ]
+   ],
+   "aprendizaje": {
+    "stack": "n8n (self-hosted Docker), Make.com, Webhooks, APIs REST, JSON estructurado, agentes LLM, WhatsApp Business API, CRM (HubSpot/Notion)",
+    "densidad": "Baja - Media",
+    "densidad_desc": "Modular y práctico: se aprende conectando flujos en bloques de 45-60 min. Cero teoría académica aburrida.",
+    "matematicas": "Casi Nulas (1/10)",
+    "matematicas_desc": "Solo aritmética básica y cálculo de costes de tokens. Cero álgebra y cero cálculo.",
+    "logica": "Alta (8/10)",
+    "logica_desc": "Mucha lógica de árbol de decisión: condicionales 'si pasa X haz Y', manejo de errores y variables.",
+    "social": "Baja en empleo (3/10) · Media en freelance (5/10)",
+    "social_desc": "Trabajo 90% en silencio frente al editor. En freelance solo tratas 1 a 1 con el dueño del negocio para entender su problema.",
+    "marketing": "Media en freelance (6/10) · Nula en empleo (1/10)",
+    "marketing_desc": "No se vende haciendo llamadas en frío; se vende regalando una auditoría o una demo funcional de 2 minutos que ahorra horas al cliente."
+   },
+   "demanda_real": "Alta y creciente en PYMEs, clínicas, inmobiliarias, despachos y agencias que tienen un caos de Excel, WhatsApp y facturas. No piden jamás título universitario: compran tiempo ahorrado y sistemas que funcionen.",
+   "entorno_y_personalidad": "Encaja al 100% con tu curiosidad mecánica («entender cómo funciona algo por dentro y mejorarlo»). Trabajas en silencio absoluto diseñando flujos lógicos, con trato 1 a 1 con dueños de negocio (sin política de oficina) y tareas cerrables.",
+   "opiniones": [
+    {
+     "tipo": "pro",
+     "autor": "Consultor Freelance n8n en España (Reddit r/automation)",
+     "texto": "«Con n8n en un VPS de 5€ le resuelves la facturación o la captación a una pyme y te pagan 2.000€ encantados. El verdadero dinero no está en montar el bot, sino en cobrarles 300€-400€ al mes por mantener las APIs funcionando sin que ellos tengan que preocuparse.»"
+    },
+    {
+     "tipo": "pro",
+     "autor": "Ex-empleado de soporte reconvertido a AI Ops",
+     "texto": "«Nadie me preguntó qué título tenía. Les enseñé un flujo en vivo que leía facturas de un correo, las clasificaba con IA y las subía a su software contable. Me contrataron al día siguiente.»"
+    },
+    {
+     "tipo": "con",
+     "autor": "Desarrollador No-Code en foros técnicos",
+     "texto": "«Olvídate del humo de YouTube de hacerte rico en 10 minutos con un vídeo de TikTok. El 70% del tiempo real es pelearte con APIs mal documentadas, limpiar datos sucios que el cliente tiene en hojas de cálculo rotas y educar a jefes que piden 'IA mágica' cuando no tienen ordenados ni sus correos.»"
+    }
+   ]
   },
-  "movimientos": [
+  {
+   "id": "ui_builder",
+   "nombre": "2. Diseñador UI + Builder con IA",
+   "etiqueta": "ALTO POTENCIAL CREATIVO (8,2/10)",
+   "color": "#38bdf8",
+   "encaje_nota": "8.2",
+   "subtitulo": "Combinar tu rasgo más alto (Artístico 92) con código asistido por IA para entregar productos completos",
+   "timeline": [
     {
-      "tipo": "Empleo",
-      "titulo": "Postular a Wingtip AI (Video Annotation, 15–25 $/h) y a Proseware Data como evaluador bilingüe español-inglés",
-      "tiempo": "1,5 h",
-      "url": "https://himalayas.app/jobs",
-      "porque": "Encaje 9.5/10: 100% remoto, trabajo asíncrono y cobro por horas para ganar experiencia en RLHF y anotación."
+     "fase": "PASO 1 · Meses 0 a 6",
+     "rol": "UI/Web Prototyper con IA",
+     "como_entrar": "Aprender fundamentos de Figma + seguir construyendo aplicaciones y paneles web de un solo archivo con Cursor/Claude como ya haces en tu portfolio.",
+     "ingresos": "Suelo base + 500–1.000 €/encargo",
+     "extra": "Coste de estudio: 0 €"
     },
     {
-      "tipo": "Formación",
-      "titulo": "Hacer el test EF SET (50 min, gratis) y añadir el enlace del certificado al CV y a LinkedIn",
-      "tiempo": "1 h",
-      "url": "https://www.efset.org/es/ef-set-50/",
-      "porque": "Un nivel de inglés acreditado con enlace público pesa en las ofertas internacionales del radar."
+     "fase": "PASO 2 · Meses 6 a 18",
+     "rol": "Product Builder / Frontend asistido",
+     "como_entrar": "En vez de competir por puestos de 'Junior UX' (donde solo dibujan pantallas), entregas a pequeñas empresas o startups la web, calculadora o dashboard ya funcionando.",
+     "ingresos": "24.000 – 32.000 €/año",
+     "extra": "1.200–2.500 € por web/app"
     },
     {
-      "tipo": "Portfolio / Visibilidad",
-      "titulo": "Grabar un vídeo de 3 minutos enseñando un flujo n8n que funcione de principio a fin",
-      "tiempo": "1,5 h",
-      "url": "https://docs.n8n.io/courses/",
-      "porque": "Un sistema funcionando convence más que un título: es lo que más piden las ofertas del Área D."
+     "fase": "PASO 3 · Años 1,5 a 3",
+     "rol": "Design Engineer (Diseño + Código IA)",
+     "como_entrar": "Perfil híbrido muy buscado en startups remotas: haces el trabajo de diseñador de producto y maquetador front-end al mismo tiempo gracias a la IA.",
+     "ingresos": "38.000 – 52.000 €/año",
+     "extra": "Remoto internacional con inglés"
+    },
+    {
+     "fase": "PASO 4 · Año 3+ (Libertad)",
+     "rol": "Estudio Digital Propio / Micro-SaaS",
+     "como_entrar": "Lanzas tus propias herramientas web de nicho bajo suscripción o vendes paquetes cerrados de diseño + automatización a empresas.",
+     "ingresos": "45.000 – 75.000 €/año",
+     "extra": "Ingresos por licencias/productos"
     }
-  ],
-  "ofertas": [
+   ],
+   "aprendizaje": {
+    "stack": "Figma (Auto-layout, Design Systems), Tailwind CSS, HTML/JS moderno asistido por IA (Cursor, Claude Code), UI Component Libraries",
+    "densidad": "Media (Muy visual y gratificante)",
+    "densidad_desc": "Ideal para ráfagas: ves el resultado visual en pantalla de inmediato. Mucho ensayo y error rápido.",
+    "matematicas": "Cero (0/10)",
+    "matematicas_desc": "Ninguna matemática avanzada. Solo proporciones visuales (grid de 8px, porcentajes y rems).",
+    "logica": "Media (5/10)",
+    "logica_desc": "Lógica de estados visuales: botones activos, modales, formularios, responsive y flujos de usuario.",
+    "social": "Baja - Media (4/10)",
+    "social_desc": "Horas en estado de flujo creativo en solitario. Solo requiere saber defender tus decisiones de diseño ante clientes sin frustrarte.",
+    "marketing": "Media - Alta en freelance (7/10)",
+    "marketing_desc": "Aquí el diseño entra por los ojos: tu propio portfolio publicado y pequeñas demos en redes o foros hacen todo el trabajo de atracción."
+   },
+   "demanda_real": "IMPORTANTE: El puesto de 'UX/UI Junior' tradicional (solo usar Figma) está saturadísimo de gente de bootcamps. Pero el perfil de 'Design Engineer' (alguien con buen gusto visual que entrega la herramienta funcionando con IA) tiene muchísima salida.",
+   "entorno_y_personalidad": "Alimenta tu interés más fuerte (Artístico 92 + Investigador 75) en silencio y estado de flujo. Precaución: como tienes sensibilidad alta a las opiniones ajenas (83), evita agencias de publicidad donde 5 jefes opinan sobre los colores; vende herramientas funcionales.",
+   "opiniones": [
     {
-      "id": "off-d1",
-      "area": "D",
-      "puesto": "AI Operations Specialist (Remote Spain)",
-      "empresa": "Contoso Cloud",
-      "tipo_contrato": "Indefinido (Nómina España)",
-      "salario": "28.000 € – 35.000 €",
-      "encaje": 9.4,
-      "url": "https://www.linkedin.com/jobs/",
-      "requisitos_clave": "Orquestación de flujos de trabajo con agentes IA, Zapier/Make/n8n, gestión de tickets y optimización de soporte. Requiere inglés profesional para tratar con equipo internacional.",
-      "por_que_encaja": "Encaje casi total con tu experiencia de soporte y creación de apps con IA. No exige picar código desde cero, sino visión operativa y testing de flujos.",
-      "fecha": "Hace 2 días",
-      "fuente": "LinkedIn / Greenhouse"
+     "tipo": "pro",
+     "autor": "Design Engineer en startup remota (Reddit r/UXDesign)",
+     "texto": "«Antes un diseñador dependía de que un programador quisiera pasar su Figma a código. Hoy con Cursor y Claude paso mis propios diseños a producción en HTML/Tailwind y cobro el proyecto entero yo solo. El cliente queda alucinado de ver la app funcionando en días.»"
     },
     {
-      "id": "off-d2",
-      "area": "D",
-      "puesto": "Support Operations & Workflow Specialist",
-      "empresa": "Fabrikam Payments",
-      "tipo_contrato": "Indefinido (100% Remoto)",
-      "salario": "26.000 € – 32.000 €",
-      "encaje": 9.2,
-      "url": "https://www.indeed.es/",
-      "requisitos_clave": "Automatización de incidencias entre Zendesk/Jira y bases de datos internas con webhooks. Soporte N1/N2 a clientes corporativos.",
-      "por_que_encaja": "Aprovecha tus 4+ años en administración de redes y soporte técnico previo combinados con automatización moderna.",
-      "fecha": "Hace 3 días",
-      "fuente": "Indeed"
+     "tipo": "pro",
+     "autor": "Diseñador UI reconvertido con IA",
+     "texto": "«Lo mejor de este trabajo es el estado de flujo: ponerte auriculares con música tranquila, abrir Figma o tu editor y moldear una interfaz limpia. Te vas a dormir con la cabeza despejada porque viste lo que creaste.»"
     },
     {
-      "id": "off-d3",
-      "area": "D",
-      "puesto": "Technical Support / Solutions Engineer (Ecosistema n8n)",
-      "empresa": "Tailspin Automation",
-      "tipo_contrato": "Contrato Remoto EOR (España)",
-      "salario": "32.000 € – 42.000 €",
-      "encaje": 9.5,
-      "url": "https://himalayas.app/jobs",
-      "requisitos_clave": "Guía técnica a usuarios sobre creación de workflows con n8n, troubleshooting de nodos y APIs. Inglés bilingüe obligatorio.",
-      "por_que_encaja": "La empresa contrata 100% en remoto desde España. Valoran enormemente tu capacidad autodidacta de resolver problemas y tu soltura hablando en inglés.",
-      "fecha": "Activa",
-      "fuente": "ATS Directo"
-    },
-    {
-      "area": "C",
-      "puesto": "Video Annotation",
-      "empresa": "Wingtip AI",
-      "salario": "15–25 $/h",
-      "modalidad": "100% remoto España",
-      "idiomas": "EN",
-      "clave": "Anotación/etiquetado de video, seguimiento de directrices, herramientas web. 100% remoto desde España, trabajo asíncrono.",
-      "fuente": "Himalayas",
-      "url": "https://himalayas.app/jobs",
-      "encaje": 9.5,
-      "trampolin": false,
-      "carta_presentacion": "Dear Hiring Team at Wingtip AI,\n\nI am writing to express my strong interest in the Video Annotation position. With my background in technical support, structured process management, and keen eye for detail, I am ready to deliver high-accuracy video labeling and calibration from day one for your AI models.\n\nThroughout my career—including over four years in technical support and helpdesk operations at Northwind Systems, alongside bilingual roles communicating daily with US-based clients—I have developed a rigorous, methodical approach to data processing, troubleshooting, and strict adherence to technical guidelines. Furthermore, my hands-on experience working with applied AI, prompt engineering, and workflow automation means I deeply understand the level of precision and contextual nuance that high-end machine learning datasets require. \n\nI am comfortable working asynchronously, managing my time efficiently, and executing repetitive tasks with consistent, error-free results. I would welcome the opportunity to contribute reliably to Wingtip AI’s video annotation projects. \n\nThank you for your time and consideration. I look forward to the possibility of discussing how my profile aligns with your team's needs.\n\nSincerely,\n\nAlex\nSpain (Available 100% remote)"
-    },
-    {
-      "area": "C",
-      "puesto": "Spanish (Spain) AI Trainer & Evaluator",
-      "empresa": "Proseware Data",
-      "salario": "20–40 $/h (Freelance)",
-      "modalidad": "100% remoto España",
-      "idiomas": "ES (España) + EN",
-      "clave": "Evaluación y corrección de respuestas de LLMs, redacción en español de España y fact-checking. Sin grado obligatorio ni código.",
-      "fuente": "Web abierta",
-      "url": "https://himalayas.app/jobs",
-      "encaje": 9.5,
-      "trampolin": false,
-      "carta_presentacion": "Estimado equipo de selección,\n\nMe dirijo a ustedes con gran interés en la posición de Spanish (Spain) AI Trainer & Evaluator en Proseware Data. Con una sólida trayectoria técnica y un profundo dominio del español peninsular, ofrezco la capacidad analítica y el rigor lingüístico necesarios para entrenar modelos de lenguaje con precisión desde el primer día.\n\nA lo largo de mis más de cuatro años en soporte técnico avanzado en Northwind Systems y mi experiencia previa en atención bilingüe para el mercado estadounidense, he desarrollado un ojo crítico excepcional para la validación de información, la resolución de ambigüedades y la estructuración lógica de contenidos. Además, mi experiencia práctica con IA aplicada —incluyendo ingeniería de \nprompts, calibración de modelos y automatización de flujos— me otorga una comprensión avanzada de cómo evaluar con rigor la calidad, seguridad y veracidad de las respuestas generadas por LLMs. \n\nEntiendo que la clave de este rol reside en la objetividad, el contraste de fuentes (fact-checking) y la naturalidad del español de España. Aporto una metodología de trabajo orientada al detalle y enfocada en optimizar tiempos sin sacrificar calidad.\n\nEstoy a su entera disposición para realizar una prueba práctica o mantener una breve entrevista y demostrar cómo puedo contribuir a su equipo.\n\nAtentamente,\n\nAlex"
-    },
-    {
-      "area": "A",
-      "puesto": "Remote Travel Services Specialist",
-      "empresa": "Adventure Works Travel",
-      "salario": "No indicado",
-      "modalidad": "100% Remoto",
-      "idiomas": "EN profesional",
-      "clave": "Soporte y atención multicanal para mercado de EE. UU., gestión de reservas y resolución de incidencias. 100% remoto.",
-      "fuente": "Himalayas",
-      "url": "https://himalayas.app/jobs",
-      "encaje": 8.5,
-      "trampolin": false,
-      "carta_presentacion": "Dear Hiring Team at Adventure Works Travel,\n\nI am writing to express my strong interest in the Remote Travel Services Specialist position. With a proven track record in high-stakes customer support and technical environments, I am equipped to manage multi-channel inquiries and complex booking operations for your US-based clientele from day one.\n\nMy candidacy is built on practical, hands-on experience. I bring over two years of dedicated bilingual support and inbound/outbound communication tailored specifically to US markets, ensuring seamless interactions, clear conflict resolution, and high satisfaction rates. Furthermore, my background in technical helpdesk operations at Northwind Systems has sharpened my ability to diagnose issues rapidly, manage high volumes of ticketing traffic, and utilize digital tools efficiently—minimizing downtime and saving operational time. \n\nBeyond standard support, I actively leverage modern automation tools and AI workflows to optimize processes and enhance operational efficiency, a mindset I look forward to applying to Adventure Works Travel’s reservation systems. \n\nI would welcome the opportunity to discuss how my customer-first approach and technical agility align with your goals in a brief conversation. Thank you for your time and consideration.\n\nSincerely,\n\nAlex \nValencia, Spain"
-    },
-    {
-      "area": "D",
-      "puesto": "Temp - Field Operations Specialist",
-      "empresa": "Litware Health",
-      "salario": "No indicado",
-      "modalidad": "100% Remoto",
-      "idiomas": "EN",
-      "clave": "1–3 años en operaciones, soporte comercial/onboarding, dominio de Office y resolución de incidencias. Sin código ni grado excluyente.",
-      "fuente": "Himalayas",
-      "url": "https://himalayas.app/jobs",
-      "encaje": 7.5,
-      "trampolin": false,
-      "carta_presentacion": "Dear Litware Health Hiring Team,\n\nI am writing to express my strong interest in the Temp - Field Operations Specialist position. With over four years of technical support and operational background—complemented by fluency in English and a strong focus on efficiency—I am ready to deliver immediate value to your team from day one.\n\nThroughout my career at companies like Northwind Systems, I have specialized in streamlining technical operations, managing complex ticketing systems, and resolving end-user issues swiftly using Microsoft Office and advanced database tools. Moreover, my experience handling bilingual operations and inbound/outbound support for U.S.-based markets ensures clear, effective communication with commercial teams and stakeholders. I am exceptionally comfortable with fast-paced environments, zero-code workflows, and rapid problem-solving, allowing me to master internal tools and onboard new processes with minimal friction.\n\nI would welcome the opportunity to discuss how my practical mindset and hands-on operational experience align with Litware Health's current needs. Thank you for your time and consideration.\n\nSincerely,\n\nAlex"
-    },
-    {
-      "area": "B",
-      "puesto": "Analista junior - Área Control Técnico",
-      "empresa": "Woodgrove Finance",
-      "salario": "17.000 € – 18.000 €/año (Indefinido)",
-      "modalidad": "100% remoto España",
-      "idiomas": "ES",
-      "clave": "**Sin experiencia previa.** Formación inicial en Contact Center y paso a control técnico/flujos CRM. Pide FP/Ciclo. 100% remoto.",
-      "fuente": "InfoJobs",
-      "url": "https://www.infojobs.net/",
-      "encaje": 7.5,
-      "trampolin": true,
-      "carta_presentacion": "Estimado equipo de selección de Woodgrove Finance,\n\nMe dirijo a ustedes con gran interés en la vacante de Analista Junior para el Área de Control Técnico. Lo que me atrae de esta posición es la oportunidad de combinar una sólida base en soporte técnico y resolución de incidencias con la evolución hacia flujos CRM y reporting analítico, un entorno donde puedo aportar valor desde el primer día.\n\nA lo largo de mi trayectoria he gestionado entornos complejos de soporte técnico y helpdesk en Northwind Systems, combinando la administración de bases de datos y herramientas ofimáticas con una clara orientación a la eficiencia. Asimismo, mi experiencia previa en atención al cliente y soporte bilingüe para mercados internacionales me ha dotado de una excelente capacidad de comunicación y rigor metodológico ante situaciones críticas. \n\nAdemás de mi experiencia operativa, incorporo un perfil actualizado en el uso práctico de herramientas de automatización (como n8n y Make) y técnicas avanzadas de IA aplicada, lo que me permite optimizar procesos repetitivos y estructurar datos con rapidez. Estoy acostumbrado a adaptarme a nuevos sistemas y aprender con agilidad, superando con éxito periodos intensivos de formación.\n\nAgradezco de antemano su tiempo al valorar mi candidatura y quedo a su total disposición para mantener una breve entrevista y profundizar en cómo puedo contribuir a los objetivos del Área de Control Técnico.\n\nAtentamente,\n\nAlex\nValencia, España\n[Tu Teléfono] | [Tu Email] | [Tu Enlace a LinkedIn]"
-    },
-    {
-      "area": "B",
-      "puesto": "Operador/a Financiero - Sector Bancario (Fines de semana)",
-      "empresa": "Coho Global Services",
-      "salario": "No disp. (16h/sem)",
-      "modalidad": "Presencial Valencia (Fines de semana)",
-      "idiomas": "ES",
-      "clave": "Monitorización de medios de pago, ticketing, gestión de incidencias. Presencial en Valencia fines de semana. Trampolín fintech.",
-      "fuente": "InfoJobs",
-      "url": "https://www.infojobs.net/",
-      "encaje": 6.0,
-      "trampolin": true,
-      "carta_presentacion": "Estimado equipo de selección de Coho Global Services,\n\nMe dirijo a ustedes con gran interés en la posición de Operador/a Financiero para los fines de semana. Con más de cuatro años de experiencia gestionando soporte técnico crítico, sistemas de incidencias y entornos complejos en Northwind Systems, estoy preparado para aportar rigor, precisión y eficiencia en la monitorización de medios de pago desde el primer día.\n\nMi trayectoria combina una sólida base en resolución de incidencias y ticketing con una alta fluidez en inglés profesional, fruto de más de dos años trabajando directamente con mercados internacionales (EE. UU.). Esta experiencia me ha dotado de un enfoque metódico para operar bajo presión, cumplir con protocolos estrictos del sector bancario y asegurar la continuidad operativa sin margen de error. Además, incorporo un perfil orientado a la optimización: domino herramientas de automatización y flujos digitales que me permiten analizar procesos y aportar soluciones prácticas para ahorrar tiempo y minimizar riesgos.\n\nEntiendo perfectamente la criticidad de operar en este sector y el valor de este puesto como puente hacia el entorno fintech. Tengo total disponibilidad para cubrir el turno de fines de semana de forma presencial en Valencia, adaptándome con rapidez a vuestros sistemas y procedimientos.\n\nAgradezco su tiempo y consideración, y me encantaría mantener una breve conversación para profundizar en cómo puedo contribuir al equipo de Coho Global Services.\n\nAtentamente,\n\nAlex\n[Teléfono] | [Email] | [Enlace a LinkedIn]"
+     "tipo": "con",
+     "autor": "Product Designer Senior en España",
+     "texto": "«Salir hoy al mercado sabiendo solo hacer pantallitas estáticas en Figma es darte contra un muro: hay 400 juniors por oferta. Además, en agencias sufres el 'diseño por comité': el jefe y el comercial opinan sobre los colores sin criterio. Para no quemarte, vende software terminado que solucione problemas, no arte subjetivo.»"
     }
-  ],
-  "hitos": [
+   ]
+  },
+  {
+   "id": "data_bi",
+   "nombre": "3. Analista de Datos → Data Science",
+   "etiqueta": "ESTABLE PERO EXIGENTE (7,4/10)",
+   "color": "#8b5cf6",
+   "encaje_nota": "7.4",
+   "subtitulo": "Entrar por Business Intelligence (SQL + Power BI) hacia Ciencia de Datos sin quemarte en el intento",
+   "timeline": [
     {
-      "nombre": "Experimento 14 días: 1 automatización para persona real",
-      "fecha": "2026-11-12",
-      "progreso": 15,
-      "siguiente": "Elegir persona con tarea repetitiva hoy"
+     "fase": "PASO 1 · Meses 0 a 6",
+     "rol": "Formación / Becario o Junior de Datos",
+     "como_entrar": "Dominar Excel avanzado, SQL y Power BI/Tableau (puedes entrar por puestos como el de El Corte Inglés o Fintonic antes de pagar 3.565 € por un máster).",
+     "ingresos": "16.000 – 20.000 €/año",
+     "extra": "Etapa de entrada / filtro"
     },
     {
-      "nombre": "Inglés certificado en CV (EF SET)",
-      "fecha": "2026-11-30",
-      "progreso": 10,
-      "siguiente": "Hacer test de 50 min en silencio"
+     "fase": "PASO 2 · Años 1 a 2",
+     "rol": "Data Analyst / BI Analyst Junior",
+     "como_entrar": "Trabajo diario con consultas SQL, limpieza de datos con Python (Pandas) y creación de cuadros de mando para dirección en empresas o consultoras.",
+     "ingresos": "23.000 – 28.000 €/año",
+     "extra": "Muy común empezar en consultora"
     },
     {
-      "nombre": "Portfolio de 3 herramientas/flujos publicados",
-      "fecha": "2026-12-15",
-      "progreso": 25,
-      "siguiente": "Subir demo de KPIs CX + flujo n8n"
+     "fase": "PASO 3 · Años 2 a 4",
+     "rol": "Senior Data Analyst / Analytics Engineer",
+     "como_entrar": "Ya con 2 años de experiencia real, nadie mira si tienes carrera universitaria. Automatizas pipelines de datos en la nube y modelos predictivos.",
+     "ingresos": "35.000 – 48.000 €/año",
+     "extra": "Salto a cliente final con inglés"
     },
     {
-      "nombre": "Badge Jira Service Management",
-      "fecha": "2027-01-15",
-      "progreso": 50,
-      "siguiente": "Terminar los dos módulos que faltan"
+     "fase": "PASO 4 · Año 4+ (Libertad)",
+     "rol": "Data Scientist / Consultor BI Freelance",
+     "como_entrar": "Trabajas como contractor remoto para empresas extranjeras o montas cuadros de mando financieros y operativos para medianas empresas.",
+     "ingresos": "50.000 – 70.000 €/año",
+     "extra": "300–450 €/día como contractor"
     }
-  ],
-  "brecha": [
+   ],
+   "aprendizaje": {
+    "stack": "SQL (JOINs, CTEs, Window Functions), Power BI / Tableau (DAX, modelado), Python (Pandas, NumPy), Excel/Power Query, Git",
+    "densidad": "Alta (7/10)",
+    "densidad_desc": "Bastante densa: requiere entender estructuras de bases de datos relacionales, sintaxis de consultas y modelos de datos.",
+    "matematicas": "Baja en Data Analyst (3/10) · Muy Alta en Data Science (9/10)",
+    "matematicas_desc": "Para analista solo necesitas estadística descriptiva (medias, varianzas, percentiles, KPIs). Para Data Scientist puro piden álgebra lineal y cálculo.",
+    "logica": "Alta (8/10)",
+    "logica_desc": "Lógica relacional pura: cómo cruzar tablas, filtrar duplicados y asegurar que los números cuadren al céntimo.",
+    "social": "Media (5/10)",
+    "social_desc": "Mucho tiempo en silencio analizando datos, pero debes presentar tus conclusiones e informes a directores que no saben de tecnología.",
+    "marketing": "Baja (2/10)",
+    "marketing_desc": "Es un perfil corporativo tradicional; te contratan por pruebas técnicas de SQL y portfolio de cuadros de mando."
+   },
+   "demanda_real": "Para 'Data Scientist Junior' (Machine Learning puro) las empresas en España casi siempre exigen carrera universitaria (Matemáticas, Física, Informática). La puerta real sin título universitario es entrar como 'Data Analyst / BI' o analista de operaciones y subir desde dentro.",
+   "entorno_y_personalidad": "Muy buen entorno para trabajar en silencio, con auriculares, analizando números sin atender llamadas. El riesgo para ti es la fase de estudio: un bootcamp de 17 módulos en 25 semanas puede agotar tu depósito de energía (40) si intentas abarcarlo todo de golpe.",
+   "opiniones": [
     {
-      "carencia": "Tercer idioma europeo",
-      "ofertas": 63,
-      "accion": "Barrera estructural: no compensa perseguirla"
+     "tipo": "pro",
+     "autor": "Data Analyst en Madrid (Reddit r/salarios_es)",
+     "texto": "«Cuando pasas la barrera de los 2 años en SQL y Power BI con buen inglés, vives muy tranquilo, 100% en remoto y nadie te molesta mientras entregues los informes a tiempo los viernes.»"
     },
     {
-      "carencia": "Programación / SQL en «Analista Funcional»",
-      "ofertas": 48,
-      "accion": "Etiqueta engañosa en InfoJobs: ya se filtra"
+     "tipo": "con",
+     "autor": "Junior reconvertido de bootcamp (Reddit r/askspain)",
+     "texto": "«Me gasté casi 5.000€ en un máster que me prometía salir de Data Scientist ganando 40k. La realidad es que todas las ofertas de Machine Learning pedían carrera de Matemáticas o Física. Conseguí trabajo de Data Analyst porque aprendí SQL y Power BI por mi cuenta.»"
     },
     {
-      "carencia": "Grado universitario obligatorio",
-      "ofertas": 17,
-      "accion": "Se esquiva en Automatización IA, BI por portfolio y Soporte Ops"
-    },
-    {
-      "carencia": "Ticketing / CRM (Jira, Zendesk, HubSpot)",
-      "ofertas": 14,
-      "accion": "Se cierra este mes con badges gratuitos"
-    },
-    {
-      "carencia": "Excel avanzado / Power BI",
-      "ofertas": 8,
-      "accion": "Aparece en fintech y banca"
+     "tipo": "con",
+     "autor": "Analista Senior en consultora",
+     "texto": "«El estrés en este puesto no es técnico: es político. Te pasas el día siendo el 'chico de los informes' para directores que te piden cambios de última hora y que luego toman decisiones ignorando los datos.»"
     }
-  ],
-  "formacion": [
+   ]
+  },
+  {
+   "id": "qa_test",
+   "nombre": "4. QA & Testing de Aplicaciones",
+   "etiqueta": "FRICCIÓN MEDIA (6,8/10)",
+   "color": "#f59e0b",
+   "encaje_nota": "6.8",
+   "subtitulo": "De probar aplicaciones manualmente a programar tests automáticos (Playwright / AI QA)",
+   "timeline": [
     {
-      "nombre": "EF SET English Certificate",
-      "emisor": "EF SET",
-      "duracion": "50 min",
-      "impacto": 9.5,
-      "url": "https://www.efset.org/es/ef-set-50/"
+     "fase": "PASO 1 · Meses 0 a 4",
+     "rol": "QA Manual / Evaluador de Calidad IA",
+     "como_entrar": "Aprender gestión de bugs en Jira, pruebas de APIs con Postman y bases de Playwright. Entrada rápida sin carrera universitaria.",
+     "ingresos": "18.000 – 22.000 €/año",
+     "extra": "Puerta clásica al mundo IT"
     },
     {
-      "nombre": "Curso oficial n8n (Automatización & Agentes IA)",
-      "emisor": "n8n Docs / YouTube",
-      "duracion": "10 h",
-      "impacto": 9.5,
-      "url": "https://docs.n8n.io/courses/"
+     "fase": "PASO 2 · Años 1 a 2",
+     "rol": "QA Tester Junior-Mid",
+     "como_entrar": "Diseñas planes de prueba, validas entregas antes de subir a producción y escribes tus primeros scripts automatizados para web y móvil.",
+     "ingresos": "23.000 – 29.000 €/año",
+     "extra": "Híbrido o remoto en consultoras"
     },
     {
-      "nombre": "Google IA / Prompting (beca Fundae)",
-      "emisor": "Fundae + Google",
-      "duracion": "15–40 h",
-      "impacto": 9.0,
-      "url": "https://www.experienciafundae.es/"
+     "fase": "PASO 3 · Años 2 a 4",
+     "rol": "QA Automation Engineer",
+     "como_entrar": "Dominas Playwright/Cypress con código e integras pruebas automáticas en el pipeline de despliegue. Aquí es donde está el salto salarial real.",
+     "ingresos": "33.000 – 45.000 €/año",
+     "extra": "Alta demanda con inglés fluido"
     },
     {
-      "nombre": "Jira Service Management Badge",
-      "emisor": "Atlassian",
-      "duracion": "2,5 h",
-      "impacto": 8.5,
-      "url": "https://university.atlassian.com/"
+     "fase": "PASO 4 · Año 4+ (Libertad)",
+     "rol": "QA Lead / Contractor Internacional",
+     "como_entrar": "Trabajas en remoto para empresas de EE. UU. o Reino Unido auditando calidad de software y agentes de IA.",
+     "ingresos": "45.000 – 60.000 €/año",
+     "extra": "Difícil montar agencia propia, mejor contractor"
     }
-  ],
-  "linkedin": [
+   ],
+   "aprendizaje": {
+    "stack": "Jira / Xray, Postman (pruebas de API), Playwright / Cypress (JavaScript/Python básico), Git, CI/CD básico",
+    "densidad": "Media (5/10)",
+    "densidad_desc": "La parte de testing manual es muy accesible; la parte de automatización requiere aprender scripting básico de programación.",
+    "matematicas": "Cero (0/10)",
+    "matematicas_desc": "No se usan matemáticas, salvo contar incidencias y medir cobertura de pruebas.",
+    "logica": "Alta (8/10)",
+    "logica_desc": "Pensamiento crítico destructivo: anticipar qué puede romper la aplicación (valores nulos, cortes de red, caracteres extraños).",
+    "social": "Alta y Delicada (7/10)",
+    "social_desc": "Aunque trabajas en silencio probando el software, tu trabajo diario consiste en decirle a los programadores dónde fallaron. Requiere mucha asertividad y tacto.",
+    "marketing": "Nula (1/10)",
+    "marketing_desc": "Rol 100% técnico asalariado; no necesitas venderte como consultor comercial."
+   },
+   "demanda_real": "El 'QA Manual' puro (hacer clic en pantallas buscando fallos) está cayendo en picado porque la IA y los propios programadores lo automatizan. Hoy las empresas piden que el QA sepa programar tests automáticos (QA Automation).",
+   "entorno_y_personalidad": "Aprovecha tu rasgo controlador y perfeccionista, PERO tiene dos choques fuertes con tu Mapa de Fricción: 1) El QA manual es muy repetitivo (tu interés Convencional es 25, te aburrirá rápido). 2) Vives en 'el sándwich' discutiendo fallos con programadores y jefes con prisa, lo que desgasta tu sensibilidad emocional (88).",
+   "opiniones": [
     {
-      "titulo": "Titular",
-      "texto": "AI Operations & Workflow Automation | Customer Support Specialist (ES/EN) | Prompting & Web Tools"
+     "tipo": "pro",
+     "autor": "QA Automation en remoto España (Reddit r/programacion)",
+     "texto": "«Entrar como QA fue mi pasaporte al sector tech sin tener ingeniería. Aprendí Playwright por mi cuenta, pasé la prueba técnica y en 3 años estoy en 38.000€ trabajando desde casa con horario flexible.»"
     },
     {
-      "titulo": "Formación",
-      "texto": "Grado Superior en Administración de Sistemas (ASIR) · Bachillerato"
+     "tipo": "con",
+     "autor": "Tester en consultora tecnológica",
+     "texto": "«Eres el policía del equipo. A los programadores les molesta que les encuentres fallos en su código ('en mi máquina funciona'), y los jefes de producto te presionan para que apruebes el pase a producción rápido. Si algo falla el fin de semana, la primera culpa va para QA.»"
     },
     {
-      "titulo": "Licencias e insignias",
-      "texto": "Añadir EF SET, n8n workflows y Jira Service Management en cuanto las tengas"
-    },
-    {
-      "titulo": "Destacados",
-      "texto": "Fijar la demo de KPIs CX y el caso real de tu automatización de 14 días"
+     "tipo": "con",
+     "autor": "QA Manual estancado",
+     "texto": "«Hacer regresiones manuales clicando las mismas 50 pantallas semana tras semana te quema el cerebro. Si no aprendes a programar tests automáticos con código, te quedas atascado en 20k-22k toda la vida.»"
     }
-  ],
-  "tips_correo": [
+   ]
+  },
+  {
+   "id": "soporte_ops",
+   "nombre": "5. Soporte Bilingüe → Support Ops",
+   "etiqueta": "SOLO COMO TRAMPOLÍN (6,5/10)",
+   "color": "#3b82f6",
+   "encaje_nota": "6.5",
+   "subtitulo": "Usar tu experiencia actual e inglés para cobrar ya, pero saliendo rápido del teléfono hacia Operaciones",
+   "timeline": [
     {
-      "origen": "Indeed & Jobert",
-      "titulo": "Palabras clave en alertas de Indeed y LinkedIn",
-      "resumen": "Usa títulos limpios en inglés y español («AI Operations», «AI Trainer», «Support Operations», «Data Analyst Junior») para recibir vacantes antes de que superen los 50 candidatos.",
-      "url": ""
+     "fase": "PASO 1 · Mes 0 (Inmediato)",
+     "rol": "Support Specialist Bilingüe / Back-Office",
+     "como_entrar": "Ya cumples el 100% de los requisitos hoy mismo. Entrar en una oferta remota por escrito/tickets o back-office (evitando call centers masivos).",
+     "ingresos": "18.000 – 25.000 €/año",
+     "extra": "Contratación inmediata"
     },
     {
-      "origen": "Boletines de Cursos",
-      "titulo": "Portfolio funcional mata a título caro en PYMEs",
-      "resumen": "En automatización, diseño con IA y analítica de entrada, enseñar un sistema funcionando (o un certificado corto verificable) abre más puertas que un bootcamp de 4.000 € sin casos reales.",
-      "url": ""
+     "fase": "PASO 2 · Años 1 a 2",
+     "rol": "Technical Support Tier 2 / Onboarding",
+     "como_entrar": "En una empresa de software (SaaS) internacional, pasas a segundo nivel técnico (resuelves incidencias complejas sin atender llamadas de choque).",
+     "ingresos": "26.000 – 33.000 €/año",
+     "extra": "Muy valorado tu inglés de EE. UU."
+    },
+    {
+     "fase": "PASO 3 · Años 2 a 4",
+     "rol": "Support Operations (Support Ops) / CX Lead",
+     "como_entrar": "Dejas de atender clientes y pasas a configurar las herramientas del equipo (Zendesk, Jira, HubSpot, bots de IA y métricas).",
+     "ingresos": "34.000 – 45.000 €/año",
+     "extra": "Conecta directo con el Camino 1"
+    },
+    {
+     "fase": "PASO 4 · Año 4+ (Libertad)",
+     "rol": "Consultor de Operaciones de CX & IA",
+     "como_entrar": "Implantas centros de ayuda automatizados con IA y flujos de CRM para empresas que quieren reducir costes de soporte.",
+     "ingresos": "45.000 – 65.000 €/año",
+     "extra": "Fácil transición a consultoría"
     }
-  ],
-  "radar_masters": [
+   ],
+   "aprendizaje": {
+    "stack": "Zendesk, HubSpot Service, Jira Service Management, flujos de macros, bots de soporte con IA, métricas de CX (CSAT, SLA, FRT)",
+    "densidad": "Mínima (2/10)",
+    "densidad_desc": "Prácticamente nula para ti: ya tienes 5 años de experiencia y nivel bilingüe de inglés.",
+    "matematicas": "Básica (1/10)",
+    "matematicas_desc": "Solo métricas y promedios de tiempos de respuesta.",
+    "logica": "Media (5/10)",
+    "logica_desc": "Configuración de reglas automáticas de enrutamiento de tickets y árboles de soporte con IA.",
+    "social": "Muy Alta en llamadas (9/10) · Baja en Back-office / Ops (3/10)",
+    "social_desc": "En teléfono el contacto social es asfixiante y agota la batería. En Back-office y Support Ops es casi todo comunicación interna por chat.",
+    "marketing": "Baja (2/10)",
+    "marketing_desc": "Se accede mediante procesos de selección estándar valorando tu inglés fluido y trato profesional."
+   },
+   "demanda_real": "Es el camino con mayor volumen de ofertas inmediatas para ti hoy en España y remoto europeo gracias a tu inglés fluido y tus 5 años de experiencia previa.",
+   "entorno_y_personalidad": "Como suelo financiero inmediato es imbatible, pero quedarse en el Nivel 1 atendiendo clientes frustrados choca frontalmente con tu Tolerancia al Estímulo (0) y tu Contacto Social (25). Úsalo SOLO en puestos de back-office/calidad (como El Corte Inglés) o para saltar en 6-12 meses a Operaciones de IA.",
+   "opiniones": [
     {
-      "escuela": "PontIA",
-      "programa": "Máster en Data Analytics",
-      "ambito": "Data Analytics & BI",
-      "duracion": "25 semanas (Part-Time)",
-      "modelo_pago": "Beca ISA (500 € reserva + % sueldo al trabajar) o 4.400 € contado (-15%)",
-      "requisitos": "Sin carrera obligatoria · DNI/NIE España · Entrevista + prueba básica de lógica",
-      "saturacion": "Alta",
-      "saturacion_color": "var(--c-rojo)",
-      "salida_remota": "Media-Alta",
-      "destacar_estrategia": "Prohibido Titanic/Netflix: necesitas 3 dashboards propios con datos de negocio (finanzas, soporte) y certificación oficial PL-300 de Microsoft.",
-      "veredicto": "Viable solo con ISA. Si no encuentras empleo, estás protegido. Aprovecha el temario de SQL, Power BI y Git.",
-      "url": "https://pontia.tech",
-      "recomendado": true,
-      "caminos": [
-        "data_bi"
-      ]
+     "tipo": "pro",
+     "autor": "Technical Support en SaaS internacional (remoto España)",
+     "texto": "«Trabajo desde España para una tecnológica alemana atendiendo tickets en inglés y español. No hago ni una sola llamada de voz. Cobro 32.000€, el ambiente es tranquilísimo y a las 17:00 apago la pantalla y me olvido del trabajo hasta el lunes.»"
     },
     {
-      "escuela": "The Bridge / Bcas",
-      "programa": "Bootcamp Data Analytics",
-      "ambito": "Data Analytics",
-      "duracion": "16 sem (Full-Time) / 32 sem (Part-Time)",
-      "modelo_pago": "ISA vía Bcas (Umbral salarial 18.000 €/año, ~14% sueldo)",
-      "requisitos": "DNI/NIE España · Prueba de admisión · Alta dedicación semanal",
-      "saturacion": "Muy Alta",
-      "saturacion_color": "var(--c-rojo)",
-      "salida_remota": "Media (Mucha bolsa en Madrid/Barcelona híbrido)",
-      "destacar_estrategia": "Tener proyectos de scraping y APIs conectadas a Power BI en vez de datasets limpios de clase.",
-      "veredicto": "Riesgo de coste final elevado si te colocan en un puesto presencial o con salario justo.",
-      "url": "https://thebridge.tech",
-      "recomendado": false,
-      "caminos": [
-        "data_bi"
-      ]
+     "tipo": "con",
+     "autor": "Ex-operador de Helpdesk telefónico",
+     "texto": "«El soporte de nivel 1 con llamadas continuas es una picadora de carne. Te miden hasta los segundos que tardas en colgar y te pasas el día absorbiendo el mal humor de clientes frustrados. Si entras en soporte, que sea por chat o para saltar a Support Ops lo antes posible.»"
     },
     {
-      "escuela": "Neoland / KeepCoding",
-      "programa": "Bootcamp AI Operations & Workflows",
-      "ambito": "AI Operations & No-Code",
-      "duracion": "12 a 16 semanas (Online)",
-      "modelo_pago": "Financiación flexible / Cuotas / Subvención Fundae",
-      "requisitos": "Sin requisitos académicos · Manejo básico de herramientas digitales",
-      "saturacion": "Baja (Océano azul)",
-      "saturacion_color": "var(--c-verde)",
-      "salida_remota": "Máxima (Startups y SaaS internacionales)",
-      "destacar_estrategia": "Vídeos breves de Loom mostrando agentes multi-herramienta funcionando (ej. n8n + Trello + Claude).",
-      "veredicto": "El ámbito con menos saturación y donde tu perfil autodidacta de constructor de apps con IA brilla de inmediato.",
-      "url": "https://neoland.es",
-      "recomendado": true,
-      "caminos": [
-        "ia_auto",
-        "ui_builder"
-      ]
-    },
-    {
-      "escuela": "ACAMS Internacional",
-      "programa": "Certificación Oficial CKYCA (KYC & Onboarding)",
-      "ambito": "Fintech & Compliance",
-      "duracion": "Autoguiado (~40 horas de estudio)",
-      "modelo_pago": "Examen oficial directo (~450 € - 750 € sin deudas futuras)",
-      "requisitos": "Sin título universitario obligatorio · Reconoce experiencia previa de atención al cliente",
-      "saturacion": "Baja-Media",
-      "saturacion_color": "var(--c-azul)",
-      "salida_remota": "Alta (Neobancos, Fintechs y Exchanges en España)",
-      "destacar_estrategia": "Apalancar tus 4 años de llamadas en inglés y soporte N1; las Fintechs buscan madurez y bilingüismo demostrable.",
-      "veredicto": "La alternativa más rápida y barata si quieres empleo corporativo estable en remoto sin picar código.",
-      "url": "https://www.acams.org",
-      "recomendado": true,
-      "caminos": [
-        "soporte_ops"
-      ]
-    },
-    {
-      "escuela": "Ruta Directa Google + Microsoft",
-      "programa": "Google Data Analytics + PL-300 Power BI",
-      "ambito": "Data & BI Oficial",
-      "duracion": "2 a 3 meses (A tu ritmo)",
-      "modelo_pago": "~39 €/mes (Coursera) + 165 € examen oficial Microsoft",
-      "requisitos": "Ninguno. 100% abierto a todo el público.",
-      "saturacion": "Media",
-      "saturacion_color": "var(--c-azul)",
-      "salida_remota": "Alta",
-      "destacar_estrategia": "Enseñar el badge oficial de Microsoft en LinkedIn junto a un portfolio en tu propia web.",
-      "veredicto": "La mejor relación coste/beneficio del mercado: obtienes el mismo stack de un bootcamp ahorrándote 4.000 €.",
-      "url": "https://learn.microsoft.com/certifications/power-bi-data-analyst/",
-      "recomendado": true,
-      "caminos": [
-        "data_bi"
-      ]
+     "tipo": "con",
+     "autor": "Customer Success Manager en startup",
+     "texto": "«Te venden que eres un asesor estratégico pero luego te asignan 80 cuentas de clientes y te pasas el día apagando fuegos por bugs que desarrollo no arregla. Para no quemarte, el secreto es pasar a Operaciones técnicas internas.»"
     }
+   ]
+  }
+ ],
+ "mejor_opcion": {
+  "puesto": "Spanish Language Expert & AI Evaluator",
+  "empresa": "Alignerr",
+  "encaje": 9.8,
+  "url": "https://www.alignerr.com",
+  "motivos": [
+   "Modalidad: 100% Remoto · Salario: 35–50 $/h (Freelance)",
+   "Evaluación de calidad y razonamiento de LLMs, redacción nativa y calibración. 100% remoto, asíncrono.",
+   "Seleccionada automáticamente en la corrida semanal tras verificar la web"
   ]
-}
-</script>
+ },
+ "movimientos": [
+  {
+   "tipo": "Hito / Empleo C",
+   "titulo": "Añadir el certificado EF SET C1 (63/100) en tu LinkedIn y CV, y postular a Alignerr (35–50 $/h) y SupportYourApp (22k–28k €)",
+   "tiempo": "1,5 h",
+   "url": "https://www.alignerr.com",
+   "porque": "Tienes la certificación en la mano expedida el 03-Nov-2026. Es el momento exacto para capitalizar el nivel C1 en plataformas que pagan en USD y soporte internacional."
+  },
+  {
+   "tipo": "Empleo Suelo Inmediato",
+   "titulo": "Postular a ALTEN IT (Analista Soporte ITIL) y vacantes de Teleoperador / Soporte Bilingüe (Área A) para afianzar ingresos",
+   "tiempo": "1 h",
+   "url": "https://www.infojobs.net/madrid/analista-de-soporte-itil-servicenow/of-i4a96ecde564177b0da9df4e5fae6c3",
+   "porque": "Tus 5+ años de soporte y 3 años con clientes de EE. UU. te sitúan en el 10% superior de candidatos para estas vacantes. Te da estabilidad económica inmediata."
+  },
+  {
+   "tipo": "Portfolio / Visibilidad",
+   "titulo": "Publicar en GitHub Pages la interfaz del Radar de Empleo (HTML interactivo) con datos mock para adjuntarla como demo técnica",
+   "tiempo": "1,5 h",
+   "url": "informes/dashboard_empleo_semanal.html",
+   "porque": "Demuestra de forma inmediata tu capacidad para coordinar herramientas con IA, diseñar dashboards limpios y estructurar flujos sin ser programador tradicional."
+  }
+ ],
+ "ofertas": [
+  {
+   "area": "C",
+   "puesto": "Spanish Language Expert & AI Evaluator",
+   "empresa": "Alignerr",
+   "salario": "35–50 $/h (Freelance)",
+   "modalidad": "100% Remoto",
+   "idiomas": "ES (Nativo) + EN C1",
+   "clave": "Evaluación de calidad y razonamiento de LLMs, redacción nativa y calibración. 100% remoto, asíncrono.",
+   "fuente": "Alignerr",
+   "url": "https://www.alignerr.com",
+   "encaje": 9.8,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Estimado equipo de selección de Alignerr,\n\nMe dirijo a ustedes con gran interés en la posición de Spanish Language Expert & AI Evaluator. Con una sólida trayectoria técnica en la gestión de infraestructuras y soporte avanzado, combinada con más de tres años de experiencia comunicándome de forma bilingüe con mercados anglosajones, entiendo perfectamente la precisión, el contexto y la matización que requieren los modelos de lenguaje actuales.\n\nA lo largo de mi carrera en Icsa Engineering y en entornos de atención internacional para EE. UU., he desarrollado una alta capacidad analítica para desglosar problemas complejos, documentar procesos y estructurar soluciones basadas en datos. Además, cuento con experiencia práctica en ingeniería de *prompts*, calibración de modelos y automatización de flujos con herramientas como n8n, lo que me permite evaluar con rigor lógico y técnico las respuestas de los LLMs.\n\nDominando el español a nivel nativo y contando con certificación oficial C1 Advanced en inglés (EF SET), aporto la agilidad y el rigor metodológico necesarios para trabajar en entornos 100% remotos y asíncronos sin fricciones. \n\nQuedo a su completa disposición para comentar cómo mi perfil analítico y técnico puede contribuir a elevar la calidad de sus evaluaciones desde el primer día.\n\nAtentamente,\n\nDaniel"
+  },
+  {
+   "area": "C",
+   "puesto": "Video Annotation Specialist",
+   "empresa": "micro1",
+   "salario": "15–25 $/h",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN C1 / Fluido",
+   "clave": "Anotación de video y seguimiento de directrices de modelos multimodales. 100% remoto asíncrono.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/video-annotation?utm_source=api",
+   "encaje": 9.6,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Hiring Team at micro1,\n\nI am writing to express my strong interest in the Video Annotation Specialist position. With a solid foundation in technical support, meticulous attention to detail, and hands-on experience working with AI workflows and prompt engineering, I am confident in my ability to interpret complex guidelines and deliver accurate, high-quality multimodal model annotations from day one.\n\nOver the past five years in technical support and helpdesk roles at Icsa Engineering, alongside my extensive background in bilingual client support for US-based markets, I have honed a disciplined approach to structured problem-solving and strict adherence to operational protocols. Additionally, my practical work with AI tools, including RLHF model calibration and process automation, has given me a sharp eye for nuance, data consistency, and edge cases—skills that directly align with the precision required for multimodal video annotation. \n\nOperating in a 100% remote, asynchronous environment is second nature to me, allowing me to manage my time efficiently and consistently meet tight deadlines without compromising on quality. I am fluent in English (backed by an official C1 Advanced certification, EF SET 63/100) and ready to contribute reliably to your upcoming projects.\n\nI would welcome the opportunity to discuss how my background and practical mindset can support micro1's goals. Thank you for your time and consideration.\n\nBest regards,\n\nDaniel"
+  },
+  {
+   "area": "A",
+   "puesto": "Remote Customer & Technical Support Specialist",
+   "empresa": "SupportYourApp",
+   "salario": "22.000 € – 28.000 €",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN C1 + ES",
+   "clave": "Soporte técnico multicanal (Zendesk/Jira), resolución de incidencias N1/N2 para clientes de EE. UU. y Europa.",
+   "fuente": "Web directa",
+   "url": "https://supportyourapp.com/careers",
+   "encaje": 9.4,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Hiring Team at SupportYourApp,\n\nI am writing to express my strong interest in the Remote Customer & Technical Support Specialist position. With over five years of dedicated technical support experience and a deep fluency in bridging complex technical issues with clear, empathetic client communication, I am well-prepared to deliver immediate value to your team from day one.\n\nThroughout my tenure at Icsa Engineering, I have specialized in managing L1/L2 incidents, troubleshooting database errors, and optimizing workflows using modern ticketing systems. Furthermore, my background includes over three years of inbound and outbound support for U.S.-based clients, ensuring seamless bilingual operations (Spanish/English). Holding an official EF SET C1 Advanced certification, I communicate effortlessly with international stakeholders. Beyond traditional support, I actively leverage modern productivity tools, prompt engineering, and automation platforms like n8n to streamline repetitive tasks and accelerate resolution times, directly boosting efficiency.\n\nI am eager to bring my practical, solution-oriented mindset to SupportYourApp and help maintain your high standards of customer satisfaction. Thank you for your time and consideration; I welcome the opportunity to discuss how my technical background and bilingual skills align with your goals.\n\nBest regards,\n\nDaniel\nSpain (100% Remote / Hybrid Madrid)"
+  },
+  {
+   "area": "C",
+   "puesto": "Bilingual Spanish-English AI Model Evaluator",
+   "empresa": "Outlier AI",
+   "salario": "18–30 $/h",
+   "modalidad": "100% Remoto",
+   "idiomas": "ES (España) + EN C1",
+   "clave": "Fact-checking, evaluación de alucinaciones y redacción en español peninsular con directrices en inglés C1.",
+   "fuente": "Outlier AI",
+   "url": "https://outlier.ai",
+   "encaje": 9.2,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Estimado equipo de selección de Outlier AI,\n\nMe dirijo a ustedes para postularme a la vacante de Bilingual Spanish-English AI Model Evaluator. Con una sólida trayectoria técnica y más de tres años de experiencia en soporte y ventas bilingües enfocados en el mercado estadounidense, cuento con la precisión lingüística y el rigor analítico necesarios para optimizar modelos de lenguaje desde el primer día.\n\nA lo largo de mi carrera en soporte técnico en Icsa Engineering y en entornos de atención al cliente para EE. UU. (Vixicom, Convergys), he desarrollado un ojo crítico para la resolución de ambigüedades, la verificación de datos y la redacción clara. Además, mi experiencia práctica con ingeniería de *prompts*, automatizaciones y evaluación de flujos tecnológicos me permite comprender con exactitud qué se necesita para calibrar respuestas precisas en español peninsular, siguiendo estrictas directrices en inglés técnico (certificado C1 Advanced por EF SET).\n\nAporto una sólida comprensión técnica, atención obsesiva al detalle y un enfoque orientado a resultados, garantizando un filtrado riguroso de alucinaciones y un *fact-checking* impecable.\n\nQuedo a su entera disposición para mantener una breve conversación o realizar una prueba técnica que demuestre mi competencia.\n\nAtentamente,\n\nDaniel  \nUbicación: España (Remoto)"
+  },
+  {
+   "area": "A",
+   "puesto": "Analista de Soporte ITIL / ServiceNow",
+   "empresa": "ALTEN IT",
+   "salario": "20.000 € – 24.000 €",
+   "modalidad": "Híbrido Madrid",
+   "idiomas": "ES + EN valorable",
+   "clave": "Gestión de tickets en ServiceNow, soporte técnico a usuarios, seguimiento de incidencias ITIL. Híbrido Madrid / Remoto.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-de-soporte-itil-servicenow/of-i4a96ecde564177b0da9df4e5fae6c3",
+   "encaje": 8.8,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Estimado equipo de selección de ALTEN IT,\n\nMe pongo en contacto con ustedes para expresar mi interés en la posición de Analista de Soporte ITIL / ServiceNow. Con más de cinco años de experiencia en soporte técnico avanzado y gestión de incidencias, aporto una sólida capacidad para optimizar flujos de trabajo bajo metodologías ITIL y garantizar la continuidad operativa desde el primer día.\n\nEn mi trayectoria en Icsa Engineering, he gestionado infraestructuras de red, bases de datos y soporte integral a usuarios en entornos 100% remotos. Además, mi experiencia previa en soporte bilingüe para el mercado estadounidense me otorga una fluidez total en inglés (certificado C1 Advanced), facilitando la comunicación técnica en entornos globales. Complemento estas competencias técnicas con el uso avanzado de herramientas de automatización e IA (como n8n y prompt engineering), lo que me permite acelerar la resolución de problemas y reducir tiempos de respuesta de manera medible.\n\nAgradezco de antemano su tiempo al revisar mi candidatura y estaré encantado de mantener una breve conversación para profundizar en cómo mi perfil puede aportar valor inmediato al equipo de ALTEN IT.\n\nAtentamente,\n\nDaniel\nUbicación: España (Remoto / Híbrido en Madrid)"
+  },
+  {
+   "area": "A",
+   "puesto": "Customer Care Representative",
+   "empresa": "AdNet AccountNet, Inc.",
+   "salario": "16 $ / hora",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN C1",
+   "clave": "Atención y resolución de consultas de usuarios en plataforma de gestión contable/servicios. 100% remoto.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/adnet-accountnet-inc/jobs/customer-care-representative?utm_source=api",
+   "encaje": 8.6,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Hiring Team at AdNet AccountNet, Inc.,\n\nI am writing to express my strong interest in the Customer Care Representative position. With a solid background in technical support, accounting software troubleshooting, and bilingual client operations, I am confident in my ability to resolve user inquiries efficiently and keep your platform running smoothly for your clients from day one.\n\nThroughout my career—including over five years in technical support and network administration at Icsa Engineering, alongside three years managing inbound and outbound operations for US-based clients—I have developed a systematic approach to problem-solving. My workflow is enhanced by practical modern tools, such as AI-driven prompt engineering and automation workflows via n8n, allowing me to reduce response times and streamline repetitive tasks. Holding an official C1 Advanced English certification (EF SET 63/100) and boasting extensive experience communicating directly with English-speaking markets, I ensure clear, empathetic, and effective interactions with every user.\n\nI am eager to bring my troubleshooting expertise and client-first mindset to AdNet AccountNet. I would welcome the opportunity to discuss how my practical background aligns with your team's goals in a brief conversation.\n\nThank you for your time and consideration.\n\nSincerely,\n\nDaniel\nSpain (100% remote availability)"
+  },
+  {
+   "area": "A",
+   "puesto": "Remote Travel Customer Support Specialist",
+   "empresa": "Hallford Travels",
+   "salario": "18.000 € – 22.000 €",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN profesional",
+   "clave": "Gestión de soporte de viajes, asistencia telefónica y resolución de cambios/reservas para clientes de EE. UU.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/hallford-travels/jobs/remote-travel-customer-support-specialist?utm_source=api",
+   "encaje": 8.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Hiring Team at Hallford Travels,\n\nI am writing to express my strong interest in the Remote Travel Customer Support Specialist position. With a proven track record in high-stakes customer support and technical problem-solving for U.S.-based clients, I am equipped to handle travel management, reservations, and real-time client assistance with calm efficiency from day one.\n\nOver the past five years at Icsa Engineering, I have specialized in rapid incident resolution, database management, and streamlined workflows. This operational rigor is complemented by my extensive background in bilingual customer service and inbound sales for U.S. markets at companies like Vixicom and Convergys. Furthermore, I hold an official C1 Advanced English certification (EF SET 63/100), ensuring seamless, professional communication with your English-speaking clientele. Beyond traditional support, I actively leverage applied AI tools and automation platforms like n8n to eliminate operational bottlenecks and optimize response times—skills I plan to use to save your team valuable hours while maintaining top-tier customer satisfaction.\n\nI would welcome the opportunity to discuss how my practical approach to support and operations can benefit Hallford Travels. Thank you for your time and consideration.\n\nBest regards,\n\nDaniel\nSpain (Available for 100% remote work)"
+  },
+  {
+   "area": "D",
+   "puesto": "Analista Funcional - BackOffice Tolling INGLES C1",
+   "empresa": "EXIS-TI",
+   "salario": "24.000 € – 28.000 €",
+   "modalidad": "100% remoto España",
+   "idiomas": "EN C1 Obligatorio + ES",
+   "clave": "Análisis funcional de procesos de peajes y ticketing, soporte operativo y gestión de incidencias. 100% remoto España.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-funcional-backoffice-tolling-ingles-c1-100-remoto/of-i615cb262274d4a8ee1b75fa6a6f1d9",
+   "encaje": 8.3,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Estimado equipo de selección de EXIS-TI,\n\nMe dirijo a ustedes con gran interés en la posición de Analista Funcional - BackOffice Tolling con inglés C1. Con una sólida trayectoria de más de cinco años en soporte técnico avanzado y gestión de incidencias en entornos exigentes, además de una fluidez bilingüe consolidada trabajando con clientes internacionales de EE. UU., considero que mi perfil encaja de forma precisa con lo que buscan.\n\nA lo largo de mi carrera en Icsa Engineering y en el sector de atención al cliente y soporte técnico, he perfeccionado mi capacidad para analizar problemas complejos de sistemas, optimizar flujos de trabajo operativos y garantizar la continuidad del servicio. Mi enfoque es estrictamente práctico y orientado a resultados: domino la resolución de incidencias en entornos de back-office, la gestión de bases de datos y la automatización de procesos mediante herramientas modernas e IA aplicada, lo que me permite reducir tiempos de respuesta y minimizar errores desde el primer día. \n\nAsimismo, mi nivel de inglés C1 me permite operar con total soltura en equipos globales y entornos técnicos angloparlantes. Valoro la oportunidad de aportar mi rigor analítico, capacidad de adaptación y experiencia técnica al equipo de EXIS-TI en esta modalidad 100% remota.\n\nAgradezco de antemano su tiempo y consideración. Quedo a su entera disposición para mantener una breve entrevista y profundizar en cómo puedo contribuir a sus operaciones.\n\nAtentamente,\n\nDaniel\nUbicación: España (100% remoto / Híbrido Madrid)"
+  },
+  {
+   "area": "D",
+   "puesto": "Temp - Field Operations Specialist",
+   "empresa": "Regeneron",
+   "salario": "21.000 € – 26.000 €",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN",
+   "clave": "Soporte operativo, coordinación de onboarding y gestión de herramientas internas. Sin programación exigida.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/regeneron/jobs/temp-field-operations-specialist?utm_source=api",
+   "encaje": 7.8,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Regeneron Hiring Team,\n\nI am writing to express my strong interest in the Temp - Field Operations Specialist position. With over five years of technical support and operational background—complemented by fluency in English and a strong focus on efficiency—I am ready to deliver immediate value to your team from day one.\n\nThroughout my career at companies like Icsa Engineering, I have specialized in streamlining technical operations, managing complex ticketing systems, and resolving end-user issues swiftly using Microsoft Office and advanced database tools. Moreover, my experience handling bilingual operations and inbound/outbound support for U.S.-based markets ensures clear, effective communication with commercial teams and stakeholders. I am exceptionally comfortable with fast-paced environments, zero-code workflows, and rapid problem-solving, allowing me to master internal tools and onboard new processes with minimal friction.\n\nI would welcome the opportunity to discuss how my practical mindset and hands-on operational experience align with Regeneron's current needs. Thank you for your time and consideration.\n\nSincerely,\n\nDaniel"
+  },
+  {
+   "area": "B",
+   "puesto": "Accounts Receivable Clerk (Fintech / Billing Ops)",
+   "empresa": "Canonical",
+   "salario": "22.000 € – 26.000 €",
+   "modalidad": "100% remoto España",
+   "idiomas": "EN C1",
+   "clave": "Gestión de cobros, conciliación y atención a clientes corporativos en EMEA. 100% remoto desde España.",
+   "fuente": "Jobicy",
+   "url": "https://jobicy.com/jobs/accounts-receivable-clerk",
+   "encaje": 7.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "esta_semana",
+   "semana_etiqueta": "✨ Esta semana",
+   "carta_presentacion": "Dear Hiring Team at Canonical,\n\nI am writing to express my strong interest in the Accounts Receivable Clerk position. With over five years of experience managing technical support, billing-adjacent operations, and high-volume data workflows, I bring a practical, process-driven approach to financial administration and corporate client communication.\n\nThroughout my career at Icsa Engineering and in bilingual environments supporting US-based clients, I have specialized in resolving complex issues accurately and under tight deadlines. My background requires meticulous attention to detail, rigorous ticket management, and clear communication with diverse stakeholders—skills that directly translate to effective collections, account reconciliation, and EMEA-region client support. Furthermore, I leverage modern automation tools like n8n and AI-assisted workflows to eliminate repetitive manual tasks, drastically reducing processing times and human error. \n\nAs a native Spanish speaker with an official C1 Advanced English certification (EF SET 63/100) and years of professional bilingual experience, I operate seamlessly in international environments. I am fully equipped to work 100% remotely from Spain and ready to contribute to Canonical’s operational efficiency from day one.\n\nI welcome the opportunity to discuss how my operational background and analytical mindset align with your team's needs. Thank you for your time and consideration.\n\nSincerely,\n\nDaniel"
+  },
+  {
+   "area": "C",
+   "puesto": "Video Annotation",
+   "empresa": "micro1",
+   "salario": "15–25 $/h",
+   "modalidad": "100% remoto España",
+   "idiomas": "EN",
+   "clave": "Anotación/etiquetado de video, seguimiento de directrices, herramientas web. 100% remoto desde España, trabajo asíncrono.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/micro1/jobs/video-annotation?utm_source=api",
+   "encaje": 9.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at micro1,\n\nI am writing to express my strong interest in the Video Annotation position. With my background in technical support, structured process management, and keen eye for detail, I am ready to deliver high-accuracy video labeling and calibration from day one for your AI models.\n\nThroughout my career—including over five years in technical support and helpdesk operations at Icsa Engineering, alongside bilingual roles communicating daily with US-based clients—I have developed a rigorous, methodical approach to data processing, troubleshooting, and strict adherence to technical guidelines. Furthermore, my hands-on experience working with applied AI, prompt engineering, and workflow automation means I deeply understand the level of precision and contextual nuance that high-end machine learning datasets require. \n\nI am comfortable working asynchronously, managing my time efficiently, and executing repetitive tasks with consistent, error-free results. I would welcome the opportunity to contribute reliably to micro1’s video annotation projects. \n\nThank you for your time and consideration. I look forward to the possibility of discussing how my profile aligns with your team's needs.\n\nSincerely,\n\nDaniel\nSpain (Available 100% remote)"
+  },
+  {
+   "area": "C",
+   "puesto": "Spanish (Spain) AI Trainer & Evaluator",
+   "empresa": "DataAnnotation.tech / Outlier AI",
+   "salario": "20–40 $/h (Freelance)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES (España) + EN",
+   "clave": "Evaluación y corrección de respuestas de LLMs, redacción en español de España y fact-checking. Sin grado obligatorio ni código.",
+   "fuente": "Web abierta",
+   "url": "https://www.dataannotation.tech/",
+   "encaje": 9.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección,\n\nMe dirijo a ustedes con gran interés en la posición de Spanish (Spain) AI Trainer & Evaluator en DataAnnotation.tech. Con una sólida trayectoria técnica y un profundo dominio del español peninsular, ofrezco la capacidad analítica y el rigor lingüístico necesarios para entrenar modelos de lenguaje con precisión desde el primer día.\n\nA lo largo de mis más de cinco años en soporte técnico avanzado en Icsa Engineering y mi experiencia previa en atención bilingüe para el mercado estadounidense, he desarrollado un ojo crítico excepcional para la validación de información, la resolución de ambigüedades y la estructuración lógica de contenidos. Además, mi experiencia práctica con IA aplicada —incluyendo ingeniería de \nprompts, calibración de modelos y automatización de flujos— me otorga una comprensión avanzada de cómo evaluar con rigor la calidad, seguridad y veracidad de las respuestas generadas por LLMs. \n\nEntiendo que la clave de este rol reside en la objetividad, el contraste de fuentes (fact-checking) y la naturalidad del español de España. Aporto una metodología de trabajo orientada al detalle y enfocada en optimizar tiempos sin sacrificar calidad.\n\nEstoy a su entera disposición para realizar una prueba práctica o mantener una breve entrevista y demostrar cómo puedo contribuir a su equipo.\n\nAtentamente,\n\nDaniel"
+  },
+  {
+   "area": "A",
+   "puesto": "Remote Travel Services Specialist",
+   "empresa": "Getaway Travel Agency",
+   "salario": "No indicado",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN profesional",
+   "clave": "Soporte y atención multicanal para mercado de EE. UU., gestión de reservas y resolución de incidencias. 100% remoto.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/getawaytravelagency/jobs/remote-travel-services-specialist-8961294125?utm_source=api",
+   "encaje": 8.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at Getaway Travel Agency,\n\nI am writing to express my strong interest in the Remote Travel Services Specialist position. With a proven track record in high-stakes customer support and technical environments, I am equipped to manage multi-channel inquiries and complex booking operations for your US-based clientele from day one.\n\nMy candidacy is built on practical, hands-on experience. I bring over three years of dedicated bilingual support and inbound/outbound communication tailored specifically to US markets, ensuring seamless interactions, clear conflict resolution, and high satisfaction rates. Furthermore, my background in technical helpdesk operations at Icsa Engineering has sharpened my ability to diagnose issues rapidly, manage high volumes of ticketing traffic, and utilize digital tools efficiently—minimizing downtime and saving operational time. \n\nBeyond standard support, I actively leverage modern automation tools and AI workflows to optimize processes and enhance operational efficiency, a mindset I look forward to applying to Getaway Travel Agency’s reservation systems. \n\nI would welcome the opportunity to discuss how my customer-first approach and technical agility align with your goals in a brief conversation. Thank you for your time and consideration.\n\nSincerely,\n\nDaniel \nMadrid, Spain"
+  },
+  {
+   "area": "B",
+   "puesto": "Analista junior - Área Control Técnico",
+   "empresa": "Financiera El Corte Inglés EFC, S.A",
+   "salario": "17.000 € – 18.000 €/año (Indefinido)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES",
+   "clave": "**Sin experiencia previa.** Formación inicial en Contact Center y paso a control técnico/flujos CRM. Pide FP/Ciclo. 100% remoto.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-junior-area-control-tecnico-100-remoto/of-i34a57e7e534bf49e5a82f26df7792d",
+   "encaje": 7.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Financiera El Corte Inglés,\n\nMe dirijo a ustedes con gran interés en la vacante de Analista Junior para el Área de Control Técnico. Lo que me atrae de esta posición es la oportunidad de combinar una sólida base en soporte técnico y resolución de incidencias con la evolución hacia flujos CRM y reporting analítico, un entorno donde puedo aportar valor desde el primer día.\n\nA lo largo de mi trayectoria he gestionado entornos complejos de soporte técnico y helpdesk en Icsa Engineering, combinando la administración de bases de datos y herramientas ofimáticas con una clara orientación a la eficiencia. Asimismo, mi experiencia previa en atención al cliente y soporte bilingüe para mercados internacionales me ha dotado de una excelente capacidad de comunicación y rigor metodológico ante situaciones críticas. \n\nAdemás de mi experiencia operativa, incorporo un perfil actualizado en el uso práctico de herramientas de automatización (como n8n y Make) y técnicas avanzadas de IA aplicada, lo que me permite optimizar procesos repetitivos y estructurar datos con rapidez. Estoy acostumbrado a adaptarme a nuevos sistemas y aprender con agilidad, superando con éxito periodos intensivos de formación.\n\nAgradezco de antemano su tiempo al valorar mi candidatura y quedo a su total disposición para mantener una breve entrevista y profundizar en cómo puedo contribuir a los objetivos del Área de Control Técnico.\n\nAtentamente,\n\nDaniel\nMadrid, España\n[Tu Teléfono] | [Tu Email] | [Tu Enlace a LinkedIn]"
+  },
+  {
+   "area": "B",
+   "puesto": "Operador/a Financiero - Sector Bancario (Fines de semana)",
+   "empresa": "COS Global Services",
+   "salario": "No disp. (16h/sem)",
+   "modalidad": "Presencial Madrid (Fines de semana)",
+   "idiomas": "ES",
+   "clave": "Monitorización de medios de pago, ticketing, gestión de incidencias. Presencial en Madrid fines de semana. Trampolín fintech.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/operador-financiero-sector-bancario-fines-semana/of-i1ae86e44c04fcb9ac3f1fdff02ff68",
+   "encaje": 6.0,
+   "trampolin": true,
+   "fecha_deteccion": "2026-11-02",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de COS Global Services,\n\nMe dirijo a ustedes con gran interés en la posición de Operador/a Financiero para los fines de semana. Con más de cinco años de experiencia gestionando soporte técnico crítico, sistemas de incidencias y entornos complejos en Icsa Engineering, estoy preparado para aportar rigor, precisión y eficiencia en la monitorización de medios de pago desde el primer día.\n\nMi trayectoria combina una sólida base en resolución de incidencias y ticketing con una alta fluidez en inglés profesional, fruto de más de tres años trabajando directamente con mercados internacionales (EE. UU.). Esta experiencia me ha dotado de un enfoque metódico para operar bajo presión, cumplir con protocolos estrictos del sector bancario y asegurar la continuidad operativa sin margen de error. Además, incorporo un perfil orientado a la optimización: domino herramientas de automatización y flujos digitales que me permiten analizar procesos y aportar soluciones prácticas para ahorrar tiempo y minimizar riesgos.\n\nEntiendo perfectamente la criticidad de operar en este sector y el valor de este puesto como puente hacia el entorno fintech. Tengo total disponibilidad para cubrir el turno de fines de semana de forma presencial en Madrid, adaptándome con rapidez a vuestros sistemas y procedimientos.\n\nAgradezco su tiempo y consideración, y me encantaría mantener una breve conversación para profundizar en cómo puedo contribuir al equipo de COS Global Services.\n\nAtentamente,\n\nDaniel\n[Teléfono] | [Email] | [Enlace a LinkedIn]"
+  },
+  {
+   "area": "C",
+   "puesto": "AI Trainer - Video Annotation",
+   "empresa": "iMerit Technology",
+   "salario": "70k - 80k $ (estimado)",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN",
+   "clave": "**\"No previous AI or robotics experience required\"**. Atención al detalle, etiquetado de video y evaluación de modelos. 100% Remoto internacional.",
+   "fuente": "Remotive",
+   "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-trainer-video-annotation-2091161",
+   "encaje": 9.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at iMerit Technology,\n\nI am writing to express my strong interest in the AI Trainer - Video Annotation position. With a robust background in technical support, structured troubleshooting, and bilingual operations, I am eager to contribute my meticulous attention to detail to help improve computer vision and machine learning models.\n\nThroughout my career, particularly during my years in technical support and remote helpdesk environments at Icsa Engineering, I have specialized in strict process adherence, systematic data handling, and rapid error identification. Furthermore, my extensive experience in English-speaking environments—delivering support and managing operations for US-based clients—has honed my cross-cultural communication and precision in handling complex instructions. \n\nWhile the role does not require prior AI experience, my personal and professional familiarity with modern AI workflows, prompt engineering, and automation tools allows me to adapt to evaluation guidelines with high speed and consistency. I am methodical, focused on quality control, and comfortable working autonomously in 100% remote settings.\n\nI would welcome the opportunity to discuss how my operational background and analytical mindset align with iMerit's standards. Thank you for your time and consideration.\n\nBest regards,\n\nDaniel\nMadrid, Spain"
+  },
+  {
+   "area": "D",
+   "puesto": "Analista Junior de Calidad, CX e IA | 100% Remoto",
+   "empresa": "Financiera El Corte Inglés EFC, S.A",
+   "salario": "17.340 € bruto/año (Indefinido)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES",
+   "clave": "**Sin experiencia previa.** 3 meses training inicial. Supervisión SAC/Calidad, configuración de asistente virtual multicanal, KPIs, Power BI, prompt engineering.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-junior-calidad-cx-ia-100-remoto/of-iafccceff7f41ae88aabe3b24068983",
+   "encaje": 9.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Financiera El Corte Inglés,\n\nMe dirijo a ustedes con gran interés en la posición de Analista Junior de Calidad, CX e IA. A pesar de que la oferta indica que no se requiere experiencia previa, mi trayectoria combinada de más de cinco años en soporte técnico en Icsa Engineering y tres años en atención al cliente bilingüe para el mercado estadounidense me otorga una ventaja operativa inmediata. \n\nEntiendo los retos del Servicio de Atención al Cliente y la supervisión de calidad. En mi día a día he gestionado complejos volúmenes de incidencias, optimizado procesos y asegurado estándares rigurosos de resolución. Además, cuento con un perfil técnico orientado a la práctica: domino la ingeniería de *prompts*, la evaluación de modelos de IA y la automatización de flujos con herramientas modernas. Esto me permitirá adaptarme con soltura al periodo de formación inicial y aportar valor desde el primer día en la configuración y supervisión del asistente virtual multicanal y el análisis de KPIs.\n\nAporto una sólida base técnica, fluidez absoluta en inglés y una mentalidad analítica enfocada en la eficiencia y el ahorro de tiempo operativo. Estoy a su entera disposición para mantener una breve conversación y detallar cómo puedo contribuir al equipo.\n\nAtentamente,\n\nDaniel  \nUbicación: España (Disponible 100% remoto / Híbrido en Madrid)"
+  },
+  {
+   "area": "A",
+   "puesto": "Remote Office Assistant",
+   "empresa": "Coalition Technologies",
+   "salario": "$35.3k - $52k",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN",
+   "clave": "Tareas administrativas, contabilidad básica, facturación, soporte de datos, incidencias y atención telefónica/email. Pruebas de habilidad práctica.",
+   "fuente": "Remotive",
+   "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
+   "encaje": 9.0,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at Coalition Technologies,\n\nI am writing to express my strong interest in the Remote Office Assistant position. With a robust background spanning over five years in technical support, data management, and operational workflows, combined with extensive experience in English-speaking client relations, I am prepared to bring immediate efficiency and precision to your administrative and support operations from day one.\n\nThroughout my career at companies like Icsa Engineering and international support centers, I have managed complex ticketing systems, resolved technical incidents, and handled sensitive billing and data tasks with strict attention to detail. Additionally, my hands-on expertise in workflow automation tools (such as n8n and Make) and AI-assisted prompt engineering allows me to optimize repetitive tasks, reduce response times, and streamline daily office administration effectively.\n\nFluent in both Spanish and professional English, I am fully accustomed to managing high-volume communications and administrative duties for US-based environments. I am practical, adaptable, and ready to tackle your skill assessments to demonstrate how my background aligns with your operational standards.\n\nThank you for your time and consideration. I look forward to discussing how I can support Coalition Technologies' ongoing growth.\n\nSincerely,\n\nDaniel\nSpain (Remote / Madrid Hybrid)"
+  },
+  {
+   "area": "A",
+   "puesto": "Analista junior - Área Control Técnico | 100% Remoto",
+   "empresa": "Financiera El Corte Inglés EFC, S.A",
+   "salario": "17.340 € bruto/año (Indefinido)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES",
+   "clave": "**Sin experiencia previa.** Pide FP/Ciclo. Configurar flujos de trabajo en CRM multicanal, seguimiento de incidencias, Excel y reporting.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-junior-area-control-tecnico-100-remoto/of-i34a57e7e534bf49e5a82f26df7792d",
+   "encaje": 9.0,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Financiera El Corte Inglés,\n\nMe dirijo a ustedes con gran interés en la posición de Analista Junior para el Área de Control Técnico. A pesar de que la oferta indica que no se requiere experiencia previa, aporto una sólida trayectoria de más de cinco años en soporte técnico, gestión de incidencias y administración de sistemas en entornos exigentes como Icsa Engineering, además de experiencia en atención multicanal y resolución analítica de problemas.\n\nMi perfil combina la rigorosidad operativa con la automatización práctica. Estoy habituado a la gestión estructurada de flujos de trabajo, el uso avanzado de Excel y el reporting orientado a la toma de decisiones. Asimismo, incorporo metodologías modernas de IA aplicada y diseño de procesos que me permiten optimizar tareas repetitivas, reducir tiempos de respuesta y elevar la calidad del dato desde el primer día, facilitando la integración rápida en vuestros sistemas CRM y operativos.\n\nMe entusiasma la posibilidad de aportar orden, agilidad y rigor analítico a su equipo de control técnico en esta modalidad 100% remota. Quedo a su entera disposición para mantener una breve conversación y profundizar en cómo puedo contribuir a vuestros objetivos.\n\nAtentamente,\n\nDaniel\n[Teléfono de contacto]\n[Correo electrónico]\n[Enlace a LinkedIn]"
+  },
+  {
+   "area": "C",
+   "puesto": "Spanish Audio Transcriptionist & Localization Specialist – AI Training",
+   "empresa": "Alignerr",
+   "salario": "15–35 $/h (Freelance)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES + EN",
+   "clave": "**Sin experiencia técnica ni grado obligatorio.** Evaluar y transcribir audio en español de España para entrenamiento de modelos LLM.",
+   "fuente": "Web abierta",
+   "url": "https://www.alignerr.com/",
+   "encaje": 9.0,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Alignerr,\n\nMe dirijo a ustedes para presentar mi candidatura al puesto de *Spanish Audio Transcriptionist & Localization Specialist – AI Training*. Con una sólida trayectoria en soporte técnico, gestión de datos y comunicación bilingüe, ofrezco la precisión lingüística y el criterio analítico necesarios para optimizar modelos de lenguaje avanzados.\n\nA lo largo de mis más de cinco años en Icsa Engineering, he perfeccionado una atención meticulosa al detalle en la resolución de incidencias, bases de datos y herramientas digitales. Además, mi experiencia previa en atención al cliente y soporte para el mercado estadounidense (en empresas como Vixicom y Convergys) me otorga un dominio absoluto del inglés y una aguda sensibilidad hacia los matices culturales y fonéticos. En los últimos años, he ampliado mi perfil integrando herramientas de IA aplicada, desarrollo de flujos automatizados (n8n/Make) y calibración de modelos, lo que me permite comprender con exactitud qué busca un LLM en términos de calidad de datos, coherencia y naturalidad en español de España.\n\nEstoy disponible para incorporarme de forma inmediata y aportar resultados eficientes desde el primer día. Agradezco su tiempo y consideración, y quedo a su total disposición para una breve prueba o entrevista técnica.\n\nAtentamente,\n\nDaniel\nEspaña (Remoto / Madrid)"
+  },
+  {
+   "area": "A",
+   "puesto": "Inside Sales Contractor",
+   "empresa": "Credit Wellness, LLC",
+   "salario": "OTE $25k - $35k",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN",
+   "clave": "Startup de asesoramiento financiero. Llamadas inbound para EE. UU., CRM, Google Sheets, asesoría financiera básica.",
+   "fuente": "Remotive",
+   "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
+   "encaje": 8.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at Credit Wellness,\n\nI am writing to express my strong interest in the Inside Sales Contractor position. With over three years of proven experience in inbound sales, bilingual customer support, and operations for US-based markets, I am confident in my ability to hit the ground running and drive conversions while delivering a seamless client experience.\n\nMy background bridges technical problem-solving with client-facing communication. At companies like Vixicom and Convergys, I handled high-volume inbound calls and guided US clients through complex processes with clarity and empathy. Furthermore, my technical foundation—spanning CRM management, Google Sheets, and workflow automation tools—allows me to handle administrative pipelines efficiently without sacrificing personal engagement. I naturally combine strong financial literacy with practical communication skills, ensuring clients feel secure and supported throughout their journey with Credit Wellness. \n\nOperating remotely from Spain, I bring high reliability, absolute fluency in English, and a data-driven approach to every interaction. I am eager to contribute my operational discipline and sales acumen to your team.\n\nThank you for your time and consideration. I welcome the opportunity to discuss how my background aligns with your goals in a brief call.\n\nBest regards,\n\nDaniel\nMadrid, Spain"
+  },
+  {
+   "area": "A",
+   "puesto": "Analista junior - Área de Ventas | 100% Remoto",
+   "empresa": "Financiera El Corte Inglés EFC, S.A",
+   "salario": "17.340 € bruto/año (Indefinido)",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES",
+   "clave": "**Sin experiencia previa.** Analizar campañas, KPIs, funnel de conversión y mejorar argumentarios comerciales.",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/analista-junior-area-ventas-100-remoto/of-i70f9c52de94c68b169f832fcca71f6",
+   "encaje": 8.5,
+   "trampolin": true,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Financiera El Corte Inglés,\n\nAunque la oferta indica \"sin experiencia previa\", mi perfil aporta una combinación poco común para este puesto de Analista Junior en el Área de Ventas: más de 5 años gestionando flujos operativos complejos, soporte técnico y análisis de incidencias en entornos exigentes, sumados a una sólida trayectoria en atención al cliente y ventas bilingües para el mercado estadounidense.\n\nEntiendo que el éxito en esta posición radica en diseccionar datos con precisión. En mi experiencia reciente en Icsa Engineering he perfeccionado la resolución analítica de problemas, mientras que mi dominio avanzado de herramientas de IA aplicada, automatización con n8n y análisis de procesos me permite estructurar KPIs, evaluar embudos de conversión y optimizar argumentarios comerciales con una agilidad muy superior a la media. No busco una curva de aprendizaje tradicional, sino aportar eficiencia operativa desde la primera semana.\n\nHablo inglés a nivel profesional fluido y aporto una mentalidad eminentemente práctica, centrada en eliminar fricciones y agilizar la toma de decisiones basada en datos. \n\nMe encantaría tener la oportunidad de conversar con ustedes para detallar cómo puedo contribuir al crecimiento del área de ventas en esta nueva etapa.\n\nAtentamente,\n\nDaniel\nUbicación: España (100% remoto / Híbrido Madrid)"
+  },
+  {
+   "area": "C",
+   "puesto": "AI Trainer - Spanish (Task-Based)",
+   "empresa": "Prolific",
+   "salario": "Por tarea / horas",
+   "modalidad": "100% Remoto",
+   "idiomas": "ES nativo",
+   "clave": "Conversaciones en video y tareas de diálogo natural en español para calibración de modelos.",
+   "fuente": "Greenhouse",
+   "url": "https://boards.greenhouse.io/prolific",
+   "encaje": 8.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Prolific,\n\nMe pongo en contacto con ustedes con un interés genuino en la posición de AI Trainer en español. Con más de ocho años de experiencia combinada en soporte técnico complejo y atención multicanal, entiendo perfectamente la importancia de la precisión, la claridad y el matiz lingüístico en la calibración de modelos de lenguaje avanzados.\n\nA lo largo de mi trayectoria en Icsa Engineering y gestionando operaciones en inglés para el mercado de EE. UU. en empresas como Convergys y Vixicom, he desarrollado una capacidad analítica sólida para descomponer problemas, estructurar flujos lógicos y comunicarme con total naturalidad. Además, mi experiencia práctica reciente con ingeniería de _prompts_, automatización de procesos y evaluación de modelos me permite comprender desde dentro las necesidades técnicas de este rol. No busco simplemente completar tareas, sino aportar criterio riguroso y consistencia en cada diálogo y conversación en video para asegurar datos de entrenamiento de máxima calidad.\n\nResido en España y cuento con total flexibilidad para adaptarme a los requerimientos de la tarea. Estaré encantado de participar en una breve prueba o conversación para demostrar mis competencias de primera mano.\n\nUn cordial saludo,\n\nDaniel"
+  },
+  {
+   "area": "C",
+   "puesto": "Quality Assurance Rater / Online Data Analyst",
+   "empresa": "TELUS Digital",
+   "salario": "Por horas",
+   "modalidad": "100% remoto España",
+   "idiomas": "ES + EN",
+   "clave": "Evaluar búsquedas y respuestas de IA para España. Flexibilidad horaria total.",
+   "fuente": "Web abierta",
+   "url": "https://www.telusdigital.com/careers",
+   "encaje": 8.5,
+   "trampolin": false,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de TELUS Digital,\n\nMe pongo en contacto con ustedes para manifestar mi interés en la posición de Quality Assurance Rater / Online Data Analyst para España. Como profesional con más de cinco años de experiencia en soporte técnico, gestión de incidencias y un profundo conocimiento operativo en IA aplicada —incluyendo *prompt engineering*, calibración de modelos y automatización—, busco aportar un criterio analítico riguroso y una alta precisión en la evaluación de contenidos y respuestas de modelos lingüísticos.\n\nA lo largo de mi trayectoria en Icsa Engineering he perfeccionado la resolución metódica de problemas complejos y la atención al detalle. Asimismo, mi experiencia previa en atención y soporte bilingüe (inglés-español) para el mercado estadounidense me otorga una sólida comprensión del contexto cultural y lingüístico necesario para evaluar con exactitud la relevancia, fluidez y calidad de las respuestas en ambos idiomas. \n\nEntiendo que la fiabilidad de las herramientas de inteligencia artificial depende de un filtrado de datos estricto y de una evaluación crítica constante. Estoy acostumbrado a trabajar con total autonomía, cumpliendo estándares exigentes y adaptándome con rapidez a pautas complejas. \n\nAgradezco su tiempo al revisar mi candidatura y quedo a su entera disposición para comentar cómo mi perfil puede aportar valor inmediato a vuestros proyectos de evaluación.\n\nUn cordial saludo,\n\nDaniel\nUbicación: España (Remoto)"
+  },
+  {
+   "area": "A",
+   "puesto": "Remote Customer Service Opportunities",
+   "empresa": "ALONJA Enterprises LLC",
+   "salario": "$12 - $15 / h",
+   "modalidad": "100% Remoto",
+   "idiomas": "EN + ES",
+   "clave": "Preparatoria/Bachillerato. Soporte multicanal y navegación en múltiples aplicaciones. Turnos flexibles.",
+   "fuente": "Himalayas",
+   "url": "https://himalayas.app/companies/alonja-enterprises-llc/jobs/work-from-home-and-build-a-schedule-that-works-for-you?utm_source=api",
+   "encaje": 8.0,
+   "trampolin": true,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Dear Hiring Team at ALONJA Enterprises LLC,\n\nI am writing to apply for the Remote Customer Service position. With over eight years of combined experience in technical support, helpdesk administration, and bilingual client operations for US markets, I offer the exact combination of multitasking agility, system fluency, and customer-first focus required for this role.\n\nIn my current role at Icsa Engineering, I manage multi-channel incidents, user administration, and database workflows in a 100% remote environment. Previously, I spent over three years handling inbound and outbound operations for US-based clients at companies like Vixicom and Convergys, ensuring smooth communication and high-satisfaction resolutions. Beyond traditional support, I actively leverage advanced AI tools, n8n automation, and prompt engineering to streamline workflows, reduce ticket resolution times, and navigate multiple enterprise applications seamlessly. \n\nI am accustomed to dynamic environments, flexible schedules, and fast-paced multi-channel communication. I am ready to bring immediate efficiency and practical problem-solving to your team from day one.\n\nI would welcome the opportunity to discuss how my background aligns with your operational goals in a brief conversation. \n\nSincerely,\n\nDaniel \n[Tu teléfono] | [Tu email] | [Tu LinkedIn/Web]"
+  },
+  {
+   "area": "B",
+   "puesto": "Becario/a Data Analyst",
+   "empresa": "Fintonic",
+   "salario": "750€ - 900€ / mes",
+   "modalidad": "100% Remoto",
+   "idiomas": "ES (EN valorable)",
+   "clave": "FP / Ciencias. SQL y Python básicos, visualización de datos fintech. Modalidad híbrida en Madrid (2 días teletrabajo).",
+   "fuente": "InfoJobs",
+   "url": "https://www.infojobs.net/madrid/becario-data-analyst/of-i438a9340cf416e9d91264e8c12c0a9",
+   "encaje": 7.0,
+   "trampolin": true,
+   "fecha_deteccion": "2026-10-26",
+   "activa": true,
+   "antiguedad": "semana_anterior",
+   "semana_etiqueta": "⏳ Semana anterior",
+   "carta_presentacion": "Estimado equipo de selección de Fintonic,\n\nMe dirijo a ustedes con gran interés en la posición de Becario/a Data Analyst. Con una sólida base técnica y más de cinco años gestionando sistemas, incidencias y bases de datos en entornos exigentes como Icsa Engineering, busco aportar una visión práctica y orientada a la eficiencia en el análisis de datos del sector fintech.\n\nAunque mi perfil combina una sólida experiencia en soporte técnico y resolución analítica de problemas, cuento con competencias prácticas en SQL, herramientas ofimáticas avanzadas y automatización de flujos de trabajo mediante IA. Esta combinación me permite no solo analizar conjuntos de datos y colaborar en su visualización, sino también entender la arquitectura técnica subyacente y las necesidades reales del usuario final. Además, mi experiencia previa en soporte bilingüe en inglés para el mercado estadounidense me aporta una gran agilidad en entornos dinámicos y globales.\n\nEstoy plenamente disponible para la modalidad híbrida en Madrid (2 días de teletrabajo) y con muchas ganas de integrarme en su equipo para transformar datos en decisiones de valor desde el primer día.\n\nAgradezco de antemano su tiempo y consideración. Estaría encantado de mantener una breve conversación para profundizar en cómo mi perfil puede contribuir a los objetivos de Fintonic.\n\nAtentamente,\n\nDaniel\nUbicación: España (Disponible para modalidad híbrida en Madrid)"
+  }
+ ],
+ "hitos": [
+  {
+   "nombre": "Experimento 14 días: 1 automatización para persona real",
+   "fecha": "2026-11-12",
+   "progreso": 15,
+   "siguiente": "Elegir persona con tarea repetitiva hoy"
+  },
+  {
+   "nombre": "Inglés certificado en CV (EF SET)",
+   "fecha": "2026-11-30",
+   "progreso": 10,
+   "siguiente": "Hacer test de 50 min en silencio"
+  },
+  {
+   "nombre": "Portfolio de 3 herramientas/flujos publicados",
+   "fecha": "2026-12-15",
+   "progreso": 25,
+   "siguiente": "Subir demo de KPIs CX + flujo n8n"
+  },
+  {
+   "nombre": "Homologación del bachillerato",
+   "fecha": "2027-01-15",
+   "progreso": 50,
+   "siguiente": "Revisión mensual del expediente"
+  }
+ ],
+ "brecha": [
+  {
+   "carencia": "Tercer idioma europeo",
+   "ofertas": 63,
+   "accion": "Barrera estructural: no compensa perseguirla"
+  },
+  {
+   "carencia": "Programación / SQL en «Analista Funcional»",
+   "ofertas": 48,
+   "accion": "Etiqueta engañosa en InfoJobs: ya se filtra"
+  },
+  {
+   "carencia": "Grado universitario obligatorio",
+   "ofertas": 17,
+   "accion": "Se esquiva en Automatización IA, BI por portfolio y Soporte Ops"
+  },
+  {
+   "carencia": "Ticketing / CRM (Jira, Zendesk, HubSpot)",
+   "ofertas": 14,
+   "accion": "Se cierra este mes con badges gratuitos"
+  },
+  {
+   "carencia": "Excel avanzado / Power BI",
+   "ofertas": 8,
+   "accion": "Aparece en Fintonic y El Corte Inglés"
+  }
+ ],
+ "formacion": [
+  {
+   "nombre": "EF SET English Certificate C1 (63/100)",
+   "emisor": "EF SET",
+   "duracion": "90 min (4 destrezas)",
+   "impacto": 10.0,
+   "url": "https://cert.efset.org/en/dcSzob"
+  },
+  {
+   "nombre": "n8n Quickstart (Insignia Oficial Obtenida)",
+   "emisor": "n8n Academy · Accredible",
+   "duracion": "3 h",
+   "impacto": 10.0,
+   "url": "https://eu.credential.net/23101181"
+  },
+  {
+   "nombre": "Google IA / Prompting (beca Fundae)",
+   "emisor": "Fundae + Google",
+   "duracion": "15–40 h",
+   "impacto": 9.0,
+   "url": "https://www.experienciafundae.es/"
+  },
+  {
+   "nombre": "Jira Service Management Badge",
+   "emisor": "Atlassian",
+   "duracion": "2,5 h",
+   "impacto": 8.5,
+   "url": "https://university.atlassian.com/"
+  }
+ ],
+ "linkedin": [
+  {
+   "titulo": "Titular",
+   "texto": "AI Operations & Workflow Automation | Customer Support Specialist (ES/EN) | Prompting & Web Tools"
+  },
+  {
+   "titulo": "Formación",
+   "texto": "Ingeniería de Sistemas (primer año completado) · Bachillerato en Ciencias y Lenguas"
+  },
+  {
+   "titulo": "Licencias e insignias",
+   "texto": "Añadir EF SET, n8n workflows y Jira Service Management en cuanto las tengas"
+  },
+  {
+   "titulo": "Destacados",
+   "texto": "Fijar la demo de KPIs CX y el caso real de tu automatización de 14 días"
+  }
+ ],
+ "tips_correo": [
+  {
+   "origen": "Indeed & Jobert",
+   "titulo": "Palabras clave en alertas de Indeed y LinkedIn",
+   "resumen": "Usa títulos limpios en inglés y español («AI Operations», «AI Trainer», «Support Operations», «Data Analyst Junior») para recibir vacantes antes de que superen los 50 candidatos.",
+   "url": ""
+  },
+  {
+   "origen": "Boletines de Cursos",
+   "titulo": "Portfolio funcional mata a título caro en PYMEs",
+   "resumen": "En automatización, diseño con IA y analítica de entrada, enseñar un sistema funcionando (o un certificado corto verificable) abre más puertas que un bootcamp de 4.000 € sin casos reales.",
+   "url": ""
+  }
+ ]
+}</script>
 <script>
 const D = JSON.parse(document.getElementById('datos').textContent);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -2024,12 +1657,6 @@ const pasan = e.total - e.descartes_fase1;
 const maxB = Math.max(...D.brecha.map(b => b.ofertas));
 const scoreCls = n => n >= 9 ? 'hi' : n >= 8 ? 'md' : 'lo';
 
-// ESTADO GLOBAL: MODO DE VISUALIZACIÓN & FILTROS
-let modoActual = 'universo'; // 'universo' | 'ia_auto' | 'ui_builder' | 'data_bi' | 'qa_test' | 'soporte_ops'
-let caminoId = 'ia_auto';
-let filtro = 'all';
-
-// INICIALIZAR ESTRUCTURA PRINCIPAL EN EL DOM
 document.getElementById('app').innerHTML = `
 <header>
   <div class="brand">
@@ -2042,31 +1669,7 @@ document.getElementById('app').innerHTML = `
   <div class="pill-rule">${esc(D.regla)}</div>
 </header>
 
-<!-- BARRA DE SELECCIÓN DE MODO: UNIVERSO GLOBAL VS ENFOQUE DE CAMINO -->
-<div class="mode-switch-wrap">
-  <div class="mode-switch-left">
-    <span class="mode-switch-label">Modo de Vista:</span>
-    <div class="mode-switch-btns" id="global-mode-buttons">
-      <button class="mode-btn active" data-mode="universo">🌐 Universo Global (Explorar)</button>
-      <button class="mode-btn" data-mode="ia_auto">🤖 AI Operations</button>
-      <button class="mode-btn" data-mode="ui_builder">🎨 UI Builder</button>
-      <button class="mode-btn" data-mode="data_bi">📊 Data & BI</button>
-      <button class="mode-btn" data-mode="qa_test">🧪 QA & Test</button>
-      <button class="mode-btn" data-mode="soporte_ops">🎧 Support Ops</button>
-    </div>
-  </div>
-  <div id="mode-status-pill" style="font-size:12px; color:#94a3b8">
-    Modo: <b>Universo Completo</b> (412 ofertas rastreadas)
-  </div>
-</div>
-
 <div class="grid">
-  <!-- SLOT PARA BANNER DE ENFOQUE DE CAMINO -->
-  <div id="focus-banner-slot" style="grid-column: span 12;"></div>
-
-  <!-- SLOT PARA PLAN QUIRÚRGICO DE ACCIÓN -->
-  <div id="plan-quirurgico-slot" style="grid-column: span 12;"></div>
-
   <!-- MEJOR OPCION -->
   <section class="tile c5 hero">
     <div>
@@ -2077,41 +1680,28 @@ document.getElementById('app').innerHTML = `
     </div>
     <div class="hero-foot">
       <span class="sub">Pieza clave de tu ruta trampolín</span>
-      <div style="display:flex; gap:8px; align-items:center">
-        <button class="btn-letter-hero" id="hero-letter-btn">✍️ Carta de Presentación</button>
-        <a class="btn-primary" href="${esc(m.url)}" target="_blank" rel="noopener">Postular ahora ↗</a>
+      <div style="display:flex; gap:8px; align-items:center"><button class="btn-letter-hero" id="hero-letter-btn">✍️ Carta de Presentación</button><a class="btn-primary" href="${esc(m.url)}" target="_blank" rel="noopener">Postular ahora ↗</a>
       </div>
     </div>
   </section>
 
   <!-- EMBUDO DE CALIBRACION -->
   <section class="tile c3">
-    <div class="kicker"><span>Embudo del filtro</span><span class="mono">${((e.seleccionadas/e.total)*100).toFixed(1)}% pasan</span></div>
-    <div class="funnel">
+    <div class="kicker"><span>Embudo del filtro</span><span class="mono">${((e.seleccionadas/e.total)*100).toFixed(1)}% éxito</span></div>
+    ${[
+      ['1. Universo bruto', e.total, 100],
+      ['2. Pasan filtro Fase 1', pasan, (pasan / e.total * 100)],
+      ['3. Leídas en web + IA', e.analizadas_ia, (e.analizadas_ia / e.total * 100)],
+      ['4. Selección final', e.seleccionadas, (e.seleccionadas / e.total * 100)]
+    ].map(([t, n, pct]) => `
       <div class="funnel-row">
-        <span>Bruto revisado</span>
-        <b class="mono">${e.total}</b>
-      </div>
-      <div class="funnel-row">
-        <span class="sub">↳ Descarte F1 (idioma/estudios/modalidad)</span>
-        <b class="mono warn">-${e.descartes_fase1}</b>
-      </div>
-      <div class="funnel-row">
-        <span>Pasan a calibración</span>
-        <b class="mono">${pasan}</b>
-      </div>
-      <div class="funnel-row">
-        <span class="sub">↳ Descarte F2 (encaje &lt;7 o perfil dudoso)</span>
-        <b class="mono warn">-${e.descartes_fase2}</b>
-      </div>
-      <div class="funnel-row final">
-        <span><b>Seleccionadas</b></span>
-        <b class="mono hi">${e.seleccionadas}</b>
-      </div>
-    </div>
+        <div class="funnel-head"><span>${t}</span><b class="mono">${n}</b></div>
+        <div class="funnel-bar"><div class="funnel-fill" style="width:${ Math.max(pct, 6).toFixed(0)}%"></div></div>
+      </div>`).join('')}
+    <div class="funnel-note">${esc(D.conclusion)}</div>
   </section>
 
-  <!-- 3 MOVIMIENTOS -->
+  <!-- 3 TAREAS -->
   <section class="tile c4">
     <div class="kicker"><span>Tus 3 movimientos (&lt;5h)</span><span class="mono" id="prog"></span></div>
     ${D.movimientos.map((t, i) => `
@@ -2129,20 +1719,20 @@ document.getElementById('app').innerHTML = `
   <section class="tile c12 career-explorer">
     <div class="kicker" style="color:#38bdf8; margin-bottom:8px">
       <span>🧭 Explorador de Carrera: 5 Caminos, Líneas de Tiempo & Realidad del Mercado</span>
-      <span class="mono">Perfil: ${esc(D.perfil_coach ? D.perfil_coach.arquetipo : 'Constructor metódico')}</span>
+      <span class="mono">Perfil: ${esc(D.perfil_coach ? D.perfil_coach.arquetipo : 'Orquídea de ráfagas')}</span>
     </div>
 
     <div class="coach-banner">
       <div class="coach-banner-left">
         <span style="font-size:.84rem; font-weight:600; color:#e2e8f0">Filtros Psicológicos de tu Mapa de Fricción:</span>
         <div class="coach-chips">
-          <span class="coach-chip">Estrategia: <b>78</b></span>
-          <span class="coach-chip">Creatividad: <b>85</b></span>
-          <span class="coach-chip warn">Aguante: <b>55</b></span>
-          <span class="coach-chip warn">Recuperación: <b>45</b></span>
-          <span class="coach-chip info">Estímulo: <b>20 (Bajo)</b></span>
-          <span class="coach-chip info">Contacto Social: <b>35</b></span>
-          <span class="coach-chip">Integridad: <b>88</b></span>
+          <span class="coach-chip">Estrategia: <b>83</b></span>
+          <span class="coach-chip">Creatividad: <b>92</b></span>
+          <span class="coach-chip warn">Aguante: <b>40</b></span>
+          <span class="coach-chip warn">Recuperación: <b>25</b></span>
+          <span class="coach-chip info">Estímulo: <b>0 (Silencio)</b></span>
+          <span class="coach-chip info">Contacto Social: <b>25</b></span>
+          <span class="coach-chip">Integridad: <b>92</b></span>
         </div>
       </div>
       <div class="coach-quote-pill">
@@ -2167,21 +1757,7 @@ document.getElementById('app').innerHTML = `
     <div id="caminos-content"></div>
   </section>
 
-  <!-- RADAR DE MASTERS, BOOTCAMPS Y MERCADO JUNIOR -->
-  <section class="tile c12" id="seccion-masters">
-    <div class="kicker">
-      <span>🎓 Radar de Másters, Bootcamps y Saturación Junior</span>
-      <span class="mono" id="masters-filter-info">ISA · Filtros personales · Opciones 100% Remotas</span>
-    </div>
-    
-    <div style="margin-bottom: 16px; font-size: 13.5px; line-height: 1.6; color: var(--c-texto-sec);">
-      <b style="color:var(--c-texto-pri);">Auditoría de saturación de mercado:</b> Los bootcamps tradicionales gradúan cientos de juniors al mes con proyectos idénticos. Aquí analizamos los programas bajo tu regla de oro: <b>cero deudas si no hay empleo</b>, <b>sin grado universitario obligatorio</b> y <b>la estrategia exacta para destacar</b> sobre los demás.
-    </div>
-
-    <div class="masters-grid" id="masters-grid-content"></div>
-  </section>
-
-  <!-- OFERTAS VERIFICADAS -->
+  <!-- OFERTAS RECOMENDADAS -->
   <section class="tile c12">
     <div class="offers-bar">
       <div>
@@ -2193,10 +1769,15 @@ document.getElementById('app').innerHTML = `
     <div id="ofertas"></div>
   </section>
 
-  <!-- QUE ME LIMITA (BRECHA DINÁMICA) -->
-  <section class="tile c6" id="seccion-brechas">
-    <div class="kicker"><span id="brechas-title">🚧 Qué te está limitando en el mercado</span><span id="brechas-count-label">Ofertas acumuladas</span></div>
-    <div id="brechas-content"></div>
+  <!-- QUE ME LIMITA (BRECHA) -->
+  <section class="tile c6">
+    <div class="kicker"><span>🚧 Qué te está limitando en el mercado</span><span>Ofertas acumuladas</span></div>
+    ${D.brecha.map(b => `
+      <div class="bar-row">
+        <div class="bar-top"><span><b>${esc(b.carencia)}</b></span><b class="mono">${b.ofertas}</b></div>
+        <div class="track"><div class="fill warn" style="width:${(b.ofertas / maxB * 100).toFixed(0)}%"></div></div>
+        <div class="bar-sub">${esc(b.accion)}</div>
+      </div>`).join('')}
   </section>
 
   <!-- HITOS A 90 DIAS -->
@@ -2249,10 +1830,9 @@ document.getElementById('app').innerHTML = `
         </div>`).join('')}
     </div>
   </section>` : ''}
-</div>
-`;
 
-// PROGRESO DE MOVIMIENTOS
+</div>`;
+
 function progreso() {
   const on = [...document.querySelectorAll('.task input:checked')].map(x => +x.dataset.i);
   localStorage.setItem(key, JSON.stringify(on));
@@ -2261,225 +1841,41 @@ function progreso() {
 document.querySelectorAll('.task input').forEach(cb => cb.addEventListener('change', progreso));
 progreso();
 
-// RENDERIZADO DINÁMICO DEL BANNER DE ENFOQUE Y PLAN QUIRÚRGICO
-function renderFocusAndPlan() {
-  const bannerSlot = document.getElementById('focus-banner-slot');
-  const planSlot = document.getElementById('plan-quirurgico-slot');
-  const statusPill = document.getElementById('mode-status-pill');
+let filtro = 'all';
+let filtroPeriodo = 'all';
 
-  if (modoActual === 'universo') {
-    bannerSlot.innerHTML = '';
-    planSlot.innerHTML = '';
-    statusPill.innerHTML = `Modo: <b>Universo Completo</b> (412 ofertas rastreadas)`;
-    return;
-  }
-
-  const c = D.caminos_carrera.find(x => x.id === modoActual);
-  if (!c) return;
-
-  statusPill.innerHTML = `Modo Enfoque: <b style="color:${c.color}">${esc(c.nombre)}</b> (Encaje: ${c.encaje_nota}/10)`;
-
-  // Render Banner
-  bannerSlot.innerHTML = `
-    <div class="focus-banner" style="border-color:${c.color}">
-      <div class="focus-banner-left">
-        <span class="focus-tag" style="color:${c.color}">🎯 MODO CAMINO ENFOCADO · ${esc(c.etiqueta)}</span>
-        <h2 class="focus-title">${esc(c.nombre)}</h2>
-        <p class="focus-desc">${esc(c.subtitulo)}. El radar está filtrado exclusivamente para este camino: barreras reales, educación relevante y ofertas compatibles.</p>
-      </div>
-      <div>
-        <button class="btn-reset-focus" id="btn-unfocus">🌐 Volver al Universo Global</button>
-      </div>
-    </div>
-  `;
-
-  // Render Plan Quirúrgico si existe
-  const pq = c.plan_quirurgico;
-  if (pq) {
-    planSlot.innerHTML = `
-      <section class="surgical-plan-tile">
-        <div class="kicker" style="color:${c.color}">
-          <span>🧭 Tu Plan de Acción Quirúrgico: Cómo entrar y destacar en ${esc(c.nombre)}</span>
-          <span class="mono">Ruta directa sin ruido</span>
-        </div>
-        <div class="surgical-grid">
-          <!-- PASO 1: INMEDIATO -->
-          <div class="surg-card step1">
-            <div>
-              <div class="surg-kicker">⚡ 1. Paso Inmediato (${esc(pq.paso_inmediato.duracion)})</div>
-              <div class="surg-title">${esc(pq.paso_inmediato.titulo)}</div>
-              <div class="surg-desc">${esc(pq.paso_inmediato.accion)}</div>
-            </div>
-            <div class="surg-action">
-              <span class="surg-badge">Objetivo: Primer hito</span>
-              <a href="${esc(pq.paso_inmediato.enlace)}" target="_blank" rel="noopener" style="color:#38bdf8; font-size:12.5px; font-weight:700; text-decoration:none">${esc(pq.paso_inmediato.enlace_label || 'Abrir ↗')}</a>
-            </div>
-          </div>
-
-          <!-- PASO 2: PORTFOLIO -->
-          <div class="surg-card step2">
-            <div>
-              <div class="surg-kicker">🛠️ 2. Prueba de Trabajo / Portafolio</div>
-              <div class="surg-title">${esc(pq.portfolio_clave.titulo)}</div>
-              <div class="surg-desc">${esc(pq.portfolio_clave.descripcion)}</div>
-            </div>
-            <div class="surg-action">
-              <span class="surg-badge" style="color:#10b981">Rompe la saturación</span>
-              <span style="font-size:11.5px; color:#94a3b8">${esc(pq.portfolio_clave.por_que_destaca)}</span>
-            </div>
-          </div>
-
-          <!-- PASO 3: ESTRATEGIA -->
-          <div class="surg-card step3">
-            <div>
-              <div class="surg-kicker">🎯 3. Dónde postular & Estrategia</div>
-              <div class="surg-title">Postulación de Alto Impacto</div>
-              <div class="surg-desc"><b>Dónde:</b> ${esc(pq.estrategia_entrada.donde_postular)}<br><br><b>Cómo destacar:</b> ${esc(pq.estrategia_entrada.como_destacar)}</div>
-            </div>
-            <div class="surg-action">
-              <span class="surg-badge" style="color:#f59e0b">Filtro superado</span>
-              <span style="font-size:11.5px; color:#cbd5e1">Cero envíos masivos genéricos</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    `;
-  } else {
-    planSlot.innerHTML = '';
-  }
-
-  // Listener para el botón de salir de enfoque
-  const unfocusBtn = document.getElementById('btn-unfocus');
-  if (unfocusBtn) {
-    unfocusBtn.addEventListener('click', () => setModo('universo'));
-  }
-}
-
-// RENDERIZADO DE BARRERAS Y MITOS DESCARTADOS
-function renderBrechas() {
-  const cont = document.getElementById('brechas-content');
-  const title = document.getElementById('brechas-title');
-  const label = document.getElementById('brechas-count-label');
-  if (!cont) return;
-
-  if (modoActual === 'universo') {
-    title.textContent = '🚧 Qué te está limitando en el mercado (General)';
-    label.textContent = 'Ofertas acumuladas';
-    cont.innerHTML = D.brecha.map(b => `
-      <div class="bar-row">
-        <div class="bar-top"><span><b>${esc(b.carencia)}</b></span><b class="mono">${b.ofertas}</b></div>
-        <div class="track"><div class="fill warn" style="width:${(b.ofertas / maxB * 100).toFixed(0)}%"></div></div>
-        <div class="bar-sub">${esc(b.accion)}</div>
-      </div>`).join('');
-    return;
-  }
-
-  const c = D.caminos_carrera.find(x => x.id === modoActual);
-  if (!c) return;
-
-  title.textContent = `🚧 Barreras Reales en ${c.nombre}`;
-  label.textContent = 'Filtros reales del sector';
-
-  const brechasList = c.barreras_reales || [];
-  const maxLocal = brechasList.length ? Math.max(...brechasList.map(b => b.ofertas)) : 10;
-
-  let html = brechasList.map(b => `
-    <div class="bar-row">
-      <div class="bar-top"><span><b>${esc(b.carencia)}</b></span><b class="mono">${b.ofertas} ofertas</b></div>
-      <div class="track"><div class="fill" style="background:#10b981; width:${(b.ofertas / maxLocal * 100).toFixed(0)}%"></div></div>
-      <div class="bar-sub">Superable en ${esc(b.superable_en || '2 semanas')} · ${esc(b.accion)}</div>
-    </div>`).join('');
-
-  if (c.mitos_descartados && c.mitos_descartados.length) {
-    html += `
-      <div class="myths-box">
-        <div class="myths-head">🛡️ Barreras generales que NO te afectan en este camino (Desmitificadas):</div>
-        ${c.mitos_descartados.map(m => `
-          <div class="myth-item">
-            <span class="myth-cross">✕ ${esc(m.mito)}:</span>
-            <span class="myth-check">${esc(m.realidad)}</span>
-          </div>
-        `).join('')}
-      </div>
-    `;
-  }
-
-  cont.innerHTML = html;
-}
-
-// RENDERIZADO DE MASTERS Y BOOTCAMPS (FILTRABLE POR CAMINO)
-function renderMasters() {
-  const cont = document.getElementById('masters-grid-content');
-  const info = document.getElementById('masters-filter-info');
-  if (!cont) return;
-
-  let masters = D.radar_masters || [];
-  if (modoActual !== 'universo') {
-    masters = masters.filter(m => (m.caminos || []).includes(modoActual) || (m.caminos || []).includes('transversal'));
-    if (info) info.textContent = `Mostrando másters y certificaciones relevantes para este camino (${masters.length})`;
-  } else {
-    if (info) info.textContent = `ISA · Filtros personales · Opciones 100% Remotas (${masters.length})`;
-  }
-
-  cont.innerHTML = masters.map(m => `
-    <div class="master-card ${m.recomendado ? 'master-featured' : ''}">
-      <div class="master-head">
-        <div>
-          <span class="master-tag">${esc(m.ambito)}</span>
-          <h3 style="margin:4px 0; font-size:16px; color:var(--c-texto-pri);">${esc(m.programa)}</h3>
-          <div class="sub" style="font-weight:600; color:var(--c-accent);">${esc(m.escuela)} · ${esc(m.duracion)}</div>
-        </div>
-        <div style="text-align:right;">
-          <span class="sat-badge" style="border-color:${m.saturacion_color}; color:${m.saturacion_color}">
-            Saturación: ${esc(m.saturacion)}
-          </span>
-        </div>
-      </div>
-
-      <div class="master-body">
-        <div class="m-prop">
-          <span class="m-label">💳 Modelo de Pago:</span>
-          <span>${esc(m.modelo_pago)}</span>
-        </div>
-        <div class="m-prop">
-          <span class="m-label">📋 Requisitos de Entrada:</span>
-          <span>${esc(m.requisitos)}</span>
-        </div>
-        <div class="m-prop">
-          <span class="m-label">🌐 Salida Remota:</span>
-          <span><b>${esc(m.salida_remota)}</b></span>
-        </div>
-        <div class="m-box-strategy">
-          <div class="m-label" style="color:var(--c-accent);">💡 Cómo resaltar frente a la saturación:</div>
-          <div>${esc(m.destacar_estrategia)}</div>
-        </div>
-        <div class="m-box-verdict">
-          <div class="m-label" style="color:var(--c-verde);">🧭 Veredicto Mentor:</div>
-          <div>${esc(m.veredicto)}</div>
-        </div>
-      </div>
-
-      <div class="master-foot">
-        <a class="btn-master" href="${esc(m.url)}" target="_blank" rel="noopener">
-          Ver programa oficial en ${esc(m.escuela)} ↗
-        </a>
-      </div>
-    </div>
-  `).join('');
-}
-
-// RENDERIZADO DE OFERTAS VERIFICADAS
 function pintar() {
   const n = k => D.ofertas.filter(o => o.area === k).length;
-  document.getElementById('filtros').innerHTML =
-    `<button class="btn-letter" id="btn-custom-letter" style="margin-right:4px">✨ Redactar para otra oferta</button>` +
-    `<button data-a="all" aria-pressed="${filtro === 'all'}">Todas (${D.ofertas.length})</button>` +
-    Object.keys(D.areas).filter(n).map(k =>
-      `<button data-a="${k}" aria-pressed="${filtro === k}"><span class="dot" style="background:${area(k).color}"></span>${esc(area(k).nombre)} (${n(k)})</button>`
-    ).join('');
+  const countNuevas = D.ofertas.filter(o => o.antiguedad === 'esta_semana').length;
+  const countAnteriores = D.ofertas.filter(o => o.antiguedad !== 'esta_semana').length;
 
-  document.getElementById('ofertas').innerHTML = D.ofertas
-    .filter(o => filtro === 'all' || o.area === filtro)
+  document.getElementById('filtros').innerHTML =
+    `<div style="display:flex; flex-direction:column; gap:8px; width:100%; margin-bottom:6px">` +
+      `<div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap">` +
+        `<span style="font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em">Período:</span>` +
+        `<button data-periodo="all" aria-pressed="${filtroPeriodo === 'all'}">📅 Todas del mes (${D.ofertas.length})</button>` +
+        `<button data-periodo="esta_semana" aria-pressed="${filtroPeriodo === 'esta_semana'}">✨ Nuevas esta semana (${countNuevas})</button>` +
+        `<button data-periodo="semana_anterior" aria-pressed="${filtroPeriodo === 'semana_anterior'}">⏳ Semanas anteriores (${countAnteriores})</button>` +
+      `</div>` +
+      `<div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap">` +
+        `<span style="font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em">Área:</span>` +
+        `<button data-a="all" aria-pressed="${filtro === 'all'}">Todas (${D.ofertas.length})</button>` +
+        Object.keys(D.areas).filter(n).map(k =>
+          `<button data-a="${k}" aria-pressed="${filtro === k}"><span class="dot" style="background:${area(k).color}"></span>${esc(area(k).nombre)} (${n(k)})</button>`
+        ).join('') +
+        `<button class="btn-letter" id="btn-custom-letter" style="margin-left:auto">✨ Redactar para otra oferta</button>` +
+      `</div>` +
+    `</div>`;
+
+  const ofertasFiltradas = D.ofertas.filter(o => {
+    const matchArea = (filtro === 'all' || o.area === filtro);
+    const matchPeriodo = (filtroPeriodo === 'all') ||
+      (filtroPeriodo === 'esta_semana' && o.antiguedad === 'esta_semana') ||
+      (filtroPeriodo === 'semana_anterior' && o.antiguedad !== 'esta_semana');
+    return matchArea && matchPeriodo;
+  });
+
+  document.getElementById('ofertas').innerHTML = ofertasFiltradas
     .map(o => `
       <details class="of" name="ofertas">
         <summary>
@@ -2487,28 +1883,48 @@ function pintar() {
           <span class="dot" style="background:${area(o.area).color}"></span>
           <span>
             <span class="of-title">${esc(o.puesto)}</span>${o.trampolin ? '<span class="pill-tramp">🚀 Trampolín</span>' : ''}
-            <div class="of-sub">${esc(o.empresa)} · ${esc(area(o.area).nombre)} · Idiomas: ${esc(o.idiomas)}</div>
+            ${o.antiguedad === 'esta_semana' 
+              ? '<span class="pill-new" style="background:color-mix(in oklab, var(--accent) 22%, #04140d); color:var(--accent-2); font-size:11px; font-weight:700; padding:2px 7px; border-radius:6px; margin-left:6px; border:1px solid color-mix(in oklab, var(--accent) 50%, transparent)">✨ Nueva</span>'
+              : '<span class="pill-old" style="background:#151b26; color:#94a3b8; font-size:11px; padding:2px 7px; border-radius:6px; margin-left:6px; border:1px solid #263244">⏳ ' + esc(o.semana_etiqueta || o.fecha_deteccion || 'anterior') + '</span>'}
+            <div class="of-sub">${esc(o.empresa)} · ${esc(area(o.area).nombre)} · Idiomas: ${esc(o.idiomas)} · <span class="sub" style="font-size:11.5px">Detectada: ${esc(o.fecha_deteccion || 'reciente')}</span></div>
           </span>
           <span class="of-mod">${esc(o.modalidad)}</span>
           <span class="of-sal">${esc(o.salario)}</span>
         </summary>
         <div class="of-body">
-          <span><b>Requisito clave:</b> ${esc(o.clave || o.requisitos_clave)} <span class="sub">(${esc(o.fuente)})</span></span>
+          <span><b>Requisito clave:</b> ${esc(o.clave || o.requisitos_clave || '')} <span class="sub">(${esc(o.fuente)})</span></span>
           <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-            <button class="btn-letter" data-letter-idx="${D.ofertas.indexOf(o)}">✍️ Carta</button>
+            <button class="btn-letter" data-letter-idx="${D.ofertas.indexOf(o)}">✍️ Carta de Presentación</button>
             <a href="${esc(o.url)}" target="_blank" rel="noopener">Ver oferta en ${esc(o.fuente)} ↗</a>
           </div>
         </div>
       </details>`).join('');
 }
 
-// RENDERIZADO DE CAMINOS DE CARRERA
+document.getElementById('filtros').addEventListener('click', ev => {
+  const b = ev.target.closest('button'); if (!b) return;
+  if (b.dataset.periodo) {
+    filtroPeriodo = b.dataset.periodo;
+    pintar();
+  } else if (b.dataset.a) {
+    filtro = b.dataset.a;
+    pintar();
+  }
+});
+
+
+
+
+// ESTADO Y RENDERIZADO DE CAMINOS DE CARRERA (AMPLIADO)
+let caminoId = 'ia_auto';
+
 function renderCaminos() {
   const cont = document.getElementById('caminos-content');
   if (!cont) return;
 
   const caminos = D.caminos_carrera || [];
 
+  // Si se seleccionó la comparativa global
   if (caminoId === 'comparar') {
     cont.innerHTML = `
       <div class="compare-wrap">
@@ -2516,7 +1932,7 @@ function renderCaminos() {
           <thead>
             <tr>
               <th>Camino</th>
-              <th>Encaje</th>
+              <th>Encaje Daniel</th>
               <th>Paso 1 (Entrada)</th>
               <th>Paso 4 (Techo / Libertad)</th>
               <th>Matemáticas</th>
@@ -2552,7 +1968,6 @@ function renderCaminos() {
   const c = caminos.find(x => x.id === caminoId) || caminos[0];
   if (!c) return;
   const ap = c.aprendizaje || {};
-  const isCurrentlyFocused = modoActual === c.id;
 
   cont.innerHTML = `
     <div class="path-header">
@@ -2560,14 +1975,9 @@ function renderCaminos() {
         <h3>${esc(c.nombre)}</h3>
         <div class="path-subtitle">${esc(c.subtitulo)}</div>
       </div>
-      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap">
-        <button class="btn-focus-path ${isCurrentlyFocused ? 'focused' : ''}" data-focus-cid="${c.id}">
-          ${isCurrentlyFocused ? '✓ Camino Enfocado en todo el Radar' : '🎯 Enfocar este camino en todo el Radar'}
-        </button>
-        <div class="path-score-badge" style="color:${c.color}; border-color:color-mix(in oklab, ${c.color} 40%, var(--line))">
-          <span>ENCAJE PERSONAL: <b>${c.encaje_nota}/10</b></span>
-          <span class="path-badge" style="background:color-mix(in oklab, ${c.color} 20%, transparent)">${esc(c.etiqueta)}</span>
-        </div>
+      <div class="path-score-badge" style="color:${c.color}; border-color:color-mix(in oklab, ${c.color} 40%, var(--line))">
+        <span>ENCAJE PERSONAL: <b>${c.encaje_nota}/10</b></span>
+        <span class="path-badge" style="background:color-mix(in oklab, ${c.color} 20%, transparent)">${esc(c.etiqueta)}</span>
       </div>
     </div>
 
@@ -2601,7 +2011,7 @@ function renderCaminos() {
       <div class="learning-grid">
         <div class="learn-chip">
           <span class="learn-label">📐 Matemáticas</span>
-          <span class="learn-val" style="color:${ap.matematicas && (ap.matematicas.includes('Nulas') || ap.matematicas.includes('Cero') || ap.matematicas.includes('Baja')) ? 'var(--accent-2)' : '#f59e0b'}">${esc(ap.matematicas)}</span>
+          <span class="learn-val" style="color:${ap.matematicas && ap.matematicas.includes('Nulas') || ap.matematicas && ap.matematicas.includes('Cero') || ap.matematicas && ap.matematicas.includes('Baja') ? 'var(--accent-2)' : '#f59e0b'}">${esc(ap.matematicas)}</span>
           <span class="learn-desc">${esc(ap.matematicas_desc)}</span>
         </div>
         <div class="learn-chip">
@@ -2616,7 +2026,7 @@ function renderCaminos() {
         </div>
         <div class="learn-chip">
           <span class="learn-label">💼 Marketing / Venta</span>
-          <span class="learn-val" style="color:${ap.marketing && (ap.marketing.includes('Baja') || ap.marketing.includes('Nula')) ? 'var(--accent-2)' : '#f59e0b'}">${esc(ap.marketing)}</span>
+          <span class="learn-val" style="color:${ap.marketing && ap.marketing.includes('Baja') || ap.marketing && ap.marketing.includes('Nula') ? 'var(--accent-2)' : '#f59e0b'}">${esc(ap.marketing)}</span>
           <span class="learn-desc">${esc(ap.marketing_desc)}</span>
         </div>
         <div class="learn-chip">
@@ -2657,58 +2067,9 @@ function renderCaminos() {
   `;
 }
 
-// CONTROLADOR MAESTRO DE CAMBIO DE MODO
-function setModo(nuevoModo) {
-  modoActual = nuevoModo;
 
-  // Actualizar botones de modo superior
-  document.querySelectorAll('#global-mode-buttons .mode-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.mode === modoActual);
-  });
 
-  if (modoActual === 'universo') {
-    filtro = 'all';
-  } else {
-    caminoId = modoActual;
-    const c = D.caminos_carrera.find(x => x.id === modoActual);
-    if (c) {
-      filtro = c.area_filtro || 'all';
-    }
-  }
-
-  // Actualizar tabs de caminos si no es comparar
-  if (modoActual !== 'universo') {
-    document.querySelectorAll('#path-tabs button').forEach(b => {
-      b.setAttribute('aria-selected', b.dataset.cid === caminoId);
-    });
-  }
-
-  renderFocusAndPlan();
-  renderBrechas();
-  renderMasters();
-  pintar();
-  renderCaminos();
-
-  // Scroll suave al banner de enfoque si se eligió un camino específico
-  if (modoActual !== 'universo') {
-    const banner = document.getElementById('focus-banner-slot');
-    if (banner) banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
-// LISTENERS DE INTERACCIÓN
-document.getElementById('global-mode-buttons').addEventListener('click', ev => {
-  const btn = ev.target.closest('.mode-btn');
-  if (btn) setModo(btn.dataset.mode);
-});
-
-document.getElementById('filtros').addEventListener('click', ev => {
-  const b = ev.target.closest('button[data-a]');
-  if (b) {
-    filtro = b.dataset.a;
-    pintar();
-  }
-});
+renderCaminos();
 
 document.getElementById('path-tabs').addEventListener('click', ev => {
   const b = ev.target.closest('button'); if (!b) return;
@@ -2718,28 +2079,17 @@ document.getElementById('path-tabs').addEventListener('click', ev => {
   });
   renderCaminos();
 });
-
 document.addEventListener('click', ev => {
-  const btnGoto = ev.target.closest('button[data-goto]');
-  if (btnGoto) {
-    caminoId = btnGoto.dataset.goto;
+  const btn = ev.target.closest('button[data-goto]');
+  if (btn) {
+    caminoId = btn.dataset.goto;
     document.querySelectorAll('#path-tabs button').forEach(b => {
       b.setAttribute('aria-selected', b.dataset.cid === caminoId);
     });
     renderCaminos();
   }
-
-  const btnFocus = ev.target.closest('button[data-focus-cid]');
-  if (btnFocus) {
-    setModo(btnFocus.dataset.focusCid);
-  }
 });
 
-// INICIALIZACIÓN COMPLETA
-renderFocusAndPlan();
-renderBrechas();
-renderMasters();
-renderCaminos();
 pintar();
 
 // GESTIÓN DEL MODAL DE CARTAS DE PRESENTACIÓN
@@ -2764,6 +2114,7 @@ function abrirModalCarta(idx) {
   document.getElementById('letter-content').value = cartaOriginalActual;
   actualizarContador();
 
+  // Resetear tabs de tono a original
   document.querySelectorAll('.tone-btn').forEach(b => b.classList.toggle('active', b.dataset.tone === 'original'));
   cambiarModoModal('view');
 
@@ -2810,19 +2161,19 @@ function generarCartaFallback(puesto, empresa, idioma, tono) {
   const isEn = idioma === 'EN';
   if (isEn) {
     if (tono === 'ia') {
-      return `Dear Hiring Team at ${empresa || 'your organization'},\n\nI am writing to express my strong interest in the ${puesto} position. With over four years of technical troubleshooting and systems administration experience, combined with hands-on expertise in prompt engineering, LLM evaluation, and automated workflows, I am eager to bring immediate value to your team.\n\nMy technical background includes managing automated pipelines with n8n, structuring clean JSON payloads, and testing generative AI outputs for consistency and safety. Having supported US-based operations in high-demand environments, I bring clear English communication, rigorous attention to detail, and a focus on solving operational bottlenecks.\n\nI would welcome the opportunity to discuss how my technical skill set and disciplined workflow can help ${empresa || 'your team'} achieve its goals. Thank you for your consideration.\n\nSincerely,\nAlex\nValencia, Spain`;
+      return `Dear Hiring Team at ${empresa || 'your organization'},\n\nI am writing to express my strong interest in the ${puesto} position. With over five years of technical troubleshooting and systems administration experience, combined with hands-on expertise in prompt engineering, LLM evaluation, and automated workflows, I am eager to bring immediate value to your team.\n\nMy technical background includes managing automated pipelines with n8n, structuring clean JSON payloads, and testing generative AI outputs for consistency and safety. Having supported US-based operations in high-demand environments, I bring clear English communication, rigorous attention to detail, and a focus on solving operational bottlenecks.\n\nI would welcome the opportunity to discuss how my technical skill set and disciplined workflow can help ${empresa || 'your team'} achieve its goals. Thank you for your consideration.\n\nSincerely,\nDaniel\nMadrid, Spain`;
     } else if (tono === 'cx') {
-      return `Dear Hiring Team at ${empresa || 'your company'},\n\nI am excited to apply for the ${puesto} role. Bringing over four years of dedicated remote technical support experience and two years serving US-based English-speaking customers, I specialize in resolving complex inquiries with high empathy, speed, and accuracy.\n\nThroughout my career at Northwind Systems and high-volume customer centers, I have maintained exceptional customer satisfaction ratings, handled user escalations, and streamlined ticketing workflows. I am comfortable working in autonomous, remote settings and thrive in fast-paced operational teams.\n\nI would love to connect for a brief conversation regarding how I can contribute to ${empresa || 'the team'} from day one. Thank you for your time and review.\n\nWarm regards,\nAlex\nValencia, Spain`;
+      return `Dear Hiring Team at ${empresa || 'your company'},\n\nI am excited to apply for the ${puesto} role. Bringing over five years of dedicated remote technical support experience and three years serving US-based English-speaking customers, I specialize in resolving complex inquiries with high empathy, speed, and accuracy.\n\nThroughout my career at Icsa Engineering and high-volume customer centers, I have maintained exceptional customer satisfaction ratings, handled user escalations, and streamlined ticketing workflows. I am comfortable working in autonomous, remote settings and thrive in fast-paced operational teams.\n\nI would love to connect for a brief conversation regarding how I can contribute to ${empresa || 'the team'} from day one. Thank you for your time and review.\n\nWarm regards,\nDaniel\nMadrid, Spain`;
     } else {
-      return `Dear Hiring Team at ${empresa || 'your company'},\n\nI am writing to apply for the ${puesto} position. With over four years of remote technical support experience, bilingual fluency (native Spanish / professional English), and active work in AI-augmented workflows, I am prepared to contribute effectively to your operational goals.\n\nHaving supported US markets for two years, I communicate with clarity and handle high-volume inquiries with precision. In parallel, my experience managing ticketing systems, user databases, and AI automation tools allows me to bridge technical execution with customer needs seamlessly.\n\nI look forward to discussing how my background aligns with ${empresa || 'your organization'}'s needs. Thank you for your time and consideration.\n\nSincerely,\nAlex\nValencia, Spain`;
+      return `Dear Hiring Team at ${empresa || 'your company'},\n\nI am writing to apply for the ${puesto} position. With over five years of remote technical support experience, bilingual fluency (native Spanish / professional English), and active work in AI-augmented workflows, I am prepared to contribute effectively to your operational goals.\n\nHaving supported US markets for three years, I communicate with clarity and handle high-volume inquiries with precision. In parallel, my experience managing ticketing systems, user databases, and AI automation tools allows me to bridge technical execution with customer needs seamlessly.\n\nI look forward to discussing how my background aligns with ${empresa || 'your organization'}'s needs. Thank you for your time and consideration.\n\nSincerely,\nDaniel\nMadrid, Spain`;
     }
   } else {
     if (tono === 'ia') {
-      return `Estimado equipo de selección de ${empresa || 'su organización'},\n\nLes escribo para presentar mi candidatura al puesto de ${puesto}. Cuento con más de cuatro años de experiencia en soporte técnico y administración de incidencias, complementada con un dominio práctico del prompting avanzado, la calibración de modelos de lenguaje y la automatización de procesos con herramientas como n8n y APIs de IA.\n\nMi perfil combina la disciplina operativa de quien ha trabajado en remoto para empresas exigentes con la agilidad para implementar soluciones basadas en IA que ahorran tiempo y reducen errores en la gestión diaria. Además, mi nivel bilingüe en inglés me permite consultar documentación técnica y operar en entornos multinacionales con total naturalidad.\n\nEstaría encantado de mantener una breve entrevista para detallar cómo mis competencias en IA aplicada y análisis pueden aportar valor inmediato a ${empresa || 'su equipo'}. Agradezco de antemano su atención.\n\nAtentamente,\nAlex\nValencia, España`;
+      return `Estimado equipo de selección de ${empresa || 'su organización'},\n\nLes escribo para presentar mi candidatura al puesto de ${puesto}. Cuento con más de cinco años de experiencia en soporte técnico y administración de incidencias, complementada con un dominio práctico del prompting avanzado, la calibración de modelos de lenguaje y la automatización de procesos con herramientas como n8n y APIs de IA.\n\nMi perfil combina la disciplina operativa de quien ha trabajado en remoto para empresas exigentes con la agilidad para implementar soluciones basadas en IA que ahorran tiempo y reducen errores en la gestión diaria. Además, mi nivel bilingüe en inglés me permite consultar documentación técnica y operar en entornos multinacionales con total naturalidad.\n\nEstaría encantado de mantener una breve entrevista para detallar cómo mis competencias en IA aplicada y análisis pueden aportar valor inmediato a ${empresa || 'su equipo'}. Agradezco de antemano su atención.\n\nAtentamente,\nDaniel\nMadrid, España`;
     } else if (tono === 'cx') {
-      return `Estimado equipo de selección de ${empresa || 'la empresa'},\n\nMe dirijo a ustedes con gran interés para postularme a la vacante de ${puesto}. Aporto una trayectoria de más de cuatro años en soporte técnico, helpdesk y atención al cliente de alto nivel, incluyendo dos años atendiendo de forma telefónica y por escrito a usuarios del mercado de Estados Unidos en inglés profesional.\n\nMi experiencia en Northwind Systems me ha enseñado a gestionar incidencias complejas bajo estrictos acuerdos de nivel de servicio (SLA), siempre con un trato empático, resolutivo y riguroso. Destaco por mi capacidad para trabajar en remoto con total autonomía, mantener la calma en situaciones de volumen y asegurar la satisfacción del usuario final.\n\nQuedo a su entera disposición para mantener una conversación y comentar cómo mi experiencia en soporte bilingüe puede sumar al equipo de ${empresa || 'su compañía'}.\n\nAtentamente,\nAlex\nValencia, España`;
+      return `Estimado equipo de selección de ${empresa || 'la empresa'},\n\nMe dirijo a ustedes con gran interés para postularme a la vacante de ${puesto}. Aporto una trayectoria de más de cinco años en soporte técnico, helpdesk y atención al cliente de alto nivel, incluyendo tres años atendiendo de forma telefónica y por escrito a usuarios del mercado de Estados Unidos en inglés profesional.\n\nMi experiencia en Icsa Engineering me ha enseñado a gestionar incidencias complejas bajo estrictos acuerdos de nivel de servicio (SLA), siempre con un trato empático, resolutivo y riguroso. Destaco por mi capacidad para trabajar en remoto con total autonomía, mantener la calma en situaciones de volumen y asegurar la satisfacción del usuario final.\n\nQuedo a su entera disposición para mantener una conversación y comentar cómo mi experiencia en soporte bilingüe puede sumar al equipo de ${empresa || 'su compañía'}.\n\nAtentamente,\nDaniel\nMadrid, España`;
     } else {
-      return `Estimado equipo de selección de ${empresa || 'su organización'},\n\nLes escribo para presentar formalmente mi candidatura al puesto de ${puesto}. Cuento con más de cuatro años de experiencia en soporte técnico y administración de incidencias en remoto, complementada con un manejo fluido del inglés profesional y un uso intensivo de herramientas de automatización e inteligencia artificial aplicada.\n\nA lo largo de mi trayectoria he combinado la resolución metódica de problemas con un alto estándar de calidad en la comunicación, tanto en español como en inglés. Me defino por un enfoque práctico, orientado a resultados tangibles y a optimizar la operativa diaria desde el primer día de trabajo.\n\nSerá un placer mantener una breve entrevista técnica para profundizar en mi encaje con las necesidades de ${empresa || 'su equipo'}. Agradezco su tiempo y valoración.\n\nAtentamente,\nAlex\nValencia, España`;
+      return `Estimado equipo de selección de ${empresa || 'su organización'},\n\nLes escribo para presentar formalmente mi candidatura al puesto de ${puesto}. Cuento con más de cinco años de experiencia en soporte técnico y administración de incidencias en remoto, complementada con un manejo fluido del inglés profesional y un uso intensivo de herramientas de automatización e inteligencia artificial aplicada.\n\nA lo largo de mi trayectoria he combinado la resolución metódica de problemas con un alto estándar de calidad en la comunicación, tanto en español como en inglés. Me defino por un enfoque práctico, orientado a resultados tangibles y a optimizar la operativa diaria desde el primer día de trabajo.\n\nSerá un placer mantener una breve entrevista técnica para profundizar en mi encaje con las necesidades de ${empresa || 'su equipo'}. Agradezco su tiempo y valoración.\n\nAtentamente,\nDaniel\nMadrid, España`;
     }
   }
 }
@@ -2873,6 +2224,8 @@ document.getElementById('btn-generate-custom').addEventListener('click', () => {
   cambiarModoModal('view');
 });
 
+
+// Listener para los botones de carta de las ofertas
 document.addEventListener('click', ev => {
   const b = ev.target.closest('button[data-letter-idx]');
   if (b) {
@@ -2880,6 +2233,7 @@ document.addEventListener('click', ev => {
   }
   const heroBtn = ev.target.closest('#hero-letter-btn');
   if (heroBtn) {
+    // Buscar el índice de la mejor opción en ofertas
     const idx = D.ofertas.findIndex(o => o.puesto === D.mejor_opcion.puesto) || 0;
     abrirModalCarta(Math.max(0, idx));
   }
@@ -2888,6 +2242,7 @@ document.addEventListener('click', ev => {
     abrirRedactorLibre();
   }
 });
+
 </script>
 </body>
 </html>
